@@ -4,10 +4,15 @@
 /* ==================== CSS RESET & VARIABLES ==================== */
 
 :root {
-    /* Teal accent (matches Scrib app) */
+    /* Primary accent - teal (app UI) */
     --accent: #26A69A;
     --accent-dark: #00897B;
     --accent-light: #4DB6AC;
+
+    /* Secondary accent - warm orange (from app icon) */
+    --accent-warm: #F5A623;
+    --accent-warm-dark: #E09000;
+    --accent-warm-light: #FFBE4D;
 
     /* Light mode */
     --bg-primary: #FAFAFA;
@@ -365,7 +370,7 @@ body {
 .final-cta {
     padding: var(--spacing-xl) var(--spacing-md);
     text-align: center;
-    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+    background: linear-gradient(135deg, var(--accent-warm) 0%, var(--accent-warm-dark) 100%);
     color: white;
 }
 
@@ -377,7 +382,7 @@ body {
 
 .final-cta .cta-button.primary {
     background: white;
-    color: var(--accent-dark);
+    color: var(--accent-warm-dark);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -599,7 +604,7 @@ button:focus-visible {
     display: block;
     width: 100%;
     padding: var(--spacing-sm);
-    background: var(--accent);
+    background: var(--accent-warm);
     color: white;
     font-size: var(--font-size-base);
     font-weight: 600;
@@ -610,7 +615,7 @@ button:focus-visible {
 }
 
 .sticky-button:active {
-    background: var(--accent-dark);
+    background: var(--accent-warm-dark);
 }
 
 @media (max-width: 600px) {
