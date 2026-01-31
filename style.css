@@ -570,7 +570,27 @@ body {
     }
 
     .features-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
+    }
+
+    .feature-card {
+        padding: var(--spacing-sm);
+    }
+
+    .feature-icon {
+        font-size: 1.75rem;
+        margin-bottom: var(--spacing-xs);
+    }
+
+    .feature-card h3 {
+        font-size: var(--font-size-base);
+        margin-bottom: 4px;
+    }
+
+    .feature-card p {
+        font-size: 0.75rem;
+        line-height: 1.4;
     }
 
     .cta-button.large {
