@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#26A69A">
+
+    <!-- SEO Meta Tags -->
+    <title>Scrib App - Free Offline Notes for Android</title>
+    <meta name="description" content="Download Scrib: Minimalist offline notes app with bullets, voice input, and complete privacy. No tracking. No cloud. Just notes.">
+    <meta name="keywords" content="notes app, offline notes, private notes, android notes, minimalist notes, bullet lists, voice notes">
+    <meta name="author" content="Beeswax Pat">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://scrib.app/">
+    <meta property="og:title" content="Scrib - Private Offline Notes App">
+    <meta property="og:description" content="No tracking. No cloud. Just notes. Download the minimalist notes app that respects your privacy.">
+    <meta property="og:image" content="og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@BeeswaxPat">
+    <meta name="twitter:title" content="Scrib - Private Offline Notes App">
+    <meta name="twitter:description" content="No tracking. No cloud. Just notes. Free on Google Play.">
+    <meta name="twitter:image" content="og-image.png">
+
+    <!-- PWA / Mobile -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Scrib">
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="icon-180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Analytics (replace GA_MEASUREMENT_ID with your actual ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <span class="theme-icon">🌙</span>
+    </button>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <div class="logo">
+                <span class="logo-icon">📝</span>
+                <h1 class="logo-text">Scrib</h1>
+            </div>
+            <p class="tagline">No tracking. No cloud. Just notes.</p>
+            <p class="subtitle">The minimalist notes app that respects your privacy.</p>
+
+            <!-- Primary CTA -->
+            <a href="https://play.google.com/store/apps/details?id=com.beeswaxpat.jot"
+               class="cta-button primary"
+               id="mainCta"
+               aria-label="Download Scrib on Google Play">
+                <svg class="play-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+                    <path fill="currentColor" d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                </svg>
+                <!-- A/B Test: Swap "Get Free" vs "Download Now" -->
+                <span class="cta-text">Get Free on Google Play</span>
+            </a>
+
+            <!-- Secondary CTA (comment out to test single CTA) -->
+            <!--
+            <a href="https://play.google.com/store/apps/details?id=com.beeswaxpat.jot"
+               class="cta-button secondary">
+                Install Now
+            </a>
+            -->
+        </div>
+    </header>
+
+    <!-- Privacy Badge Section -->
+    <section class="privacy-badge" aria-labelledby="privacy-heading">
+        <div class="badge-content">
+            <span class="badge-icon">🔒</span>
+            <div class="badge-text">
+                <h2 id="privacy-heading">Zero Data Collected</h2>
+                <p>Your notes never leave your device. No accounts. No sync. No tracking.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" aria-labelledby="features-heading">
+        <h2 id="features-heading" class="section-title">Everything you need. Nothing you don't.</h2>
+
+        <div class="features-grid">
+            <article class="feature-card">
+                <span class="feature-icon" aria-hidden="true">📝</span>
+                <h3>Auto-Save</h3>
+                <p>Notes save automatically as you type. Never lose your thoughts.</p>
+            </article>
+
+            <article class="feature-card">
+                <span class="feature-icon" aria-hidden="true">•</span>
+                <h3>Bullet Lists</h3>
+                <p>One-tap bullet mode for quick lists and brainstorming sessions.</p>
+            </article>
+
+            <article class="feature-card">
+                <span class="feature-icon" aria-hidden="true">🎤</span>
+                <h3>Voice Input</h3>
+                <p>Optional speech-to-text. Dictate notes hands-free when you need to.</p>
+            </article>
+
+            <article class="feature-card">
+                <span class="feature-icon" aria-hidden="true">🎨</span>
+                <h3>Themes & Colors</h3>
+                <p>System, light, or dark mode. 5 accent colors. 8 note colors.</p>
+            </article>
+
+            <article class="feature-card">
+                <span class="feature-icon" aria-hidden="true">Aa</span>
+                <h3>Text Sizes</h3>
+                <p>Small, medium, or large text. Accessible for everyone.</p>
+            </article>
+
+            <article class="feature-card">
+                <span class="feature-icon" aria-hidden="true">📱</span>
+                <h3>Offline First</h3>
+                <p>Works without internet. Your notes are always available.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Screenshots / App Preview -->
+    <section class="app-preview" aria-labelledby="preview-heading">
+        <h2 id="preview-heading" class="section-title">Simple. Clean. Fast.</h2>
+        <div class="screenshots-container">
+            <div class="screenshot-wrapper">
+                <img src="screenshot-dark.jpg" alt="Scrib app in dark mode showing colorful notes" class="screenshot" loading="lazy">
+                <span class="screenshot-label">Dark Mode</span>
+            </div>
+            <div class="screenshot-wrapper">
+                <img src="screenshot-light.jpg" alt="Scrib app in light mode showing colorful notes" class="screenshot" loading="lazy">
+                <span class="screenshot-label">Light Mode</span>
+            </div>
+            <div class="screenshot-wrapper">
+                <img src="screenshot-settings.jpg" alt="Scrib settings screen showing theme, text size, and privacy options" class="screenshot" loading="lazy">
+                <span class="screenshot-label">Settings</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta" aria-labelledby="download-heading">
+        <h2 id="download-heading">Ready to take notes the private way?</h2>
+        <a href="https://play.google.com/store/apps/details?id=com.beeswaxpat.jot"
+           class="cta-button primary large"
+           aria-label="Download Scrib on Google Play">
+            <svg class="play-icon" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+                <path fill="currentColor" d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+            </svg>
+            Download Free
+        </a>
+        <p class="cta-subtext">Free forever. No ads. No in-app purchases.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">📝 Scrib</span>
+                <p>A minimalist notes app.</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://x.com/BeeswaxPat" target="_blank" rel="noopener noreferrer" aria-label="Follow @BeeswaxPat on X">
+                    @BeeswaxPat on X
+                </a>
+                <span class="footer-divider">•</span>
+                <a href="https://play.google.com/store/apps/details?id=com.beeswaxpat.jot" target="_blank" rel="noopener noreferrer">
+                    Google Play
+                </a>
+            </div>
+            <p class="footer-privacy">
+                <strong>Privacy Promise:</strong> Scrib collects zero data. Your notes stay on your device. Period.
+            </p>
+            <p class="footer-copyright">© 2026 Beeswax Pat. Made with 💙 and Claude.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
