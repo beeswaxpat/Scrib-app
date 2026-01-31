@@ -94,6 +94,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Track CTA clicks
     setupCTATracking();
 
+    // Setup fade-in animations
+    setupFadeInAnimations();
+
+    // Setup sticky CTA visibility
+    setupStickyCta();
+
     // Listen for system theme changes
     if (window.matchMedia) {
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
@@ -104,6 +110,41 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// ==================== FADE-IN ANIMATIONS ====================
+
+function setupFadeInAnimations() {
+    const elements = document.querySelectorAll('.fade-in');
+    if (!elements.length) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    elements.forEach(el => observer.observe(el));
+}
+
+// ==================== STICKY CTA ====================
+
+function setupStickyCta() {
+    const stickyCta = document.querySelector('.sticky-cta');
+    const finalCta = document.querySelector('.final-cta');
+    if (!stickyCta || !finalCta) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            stickyCta.style.opacity = entry.isIntersecting ? '0' : '1';
+            stickyCta.style.pointerEvents = entry.isIntersecting ? 'none' : 'auto';
+        });
+    }, { threshold: 0.3 });
+
+    observer.observe(finalCta);
+}
 
 /**
  * Setup click tracking for all CTA buttons

@@ -579,11 +579,69 @@ button:focus-visible {
     }
 }
 
+/* ==================== STICKY MOBILE CTA ==================== */
+
+.sticky-cta {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--spacing-sm);
+    background: var(--bg-primary);
+    border-top: 1px solid var(--border);
+    z-index: 100;
+    padding-bottom: max(var(--spacing-sm), env(safe-area-inset-bottom));
+    transition: opacity 0.3s ease;
+}
+
+.sticky-button {
+    display: block;
+    width: 100%;
+    padding: var(--spacing-sm);
+    background: var(--accent);
+    color: white;
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    transition: background var(--transition-fast);
+}
+
+.sticky-button:active {
+    background: var(--accent-dark);
+}
+
+@media (max-width: 600px) {
+    .sticky-cta {
+        display: block;
+    }
+
+    .footer {
+        padding-bottom: calc(var(--spacing-lg) + 70px);
+    }
+}
+
+/* ==================== FADE-IN ANIMATIONS ==================== */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Print styles */
 @media print {
     .theme-toggle,
-    .cta-button {
-        display: none;
+    .cta-button,
+    .sticky-cta {
+        display: none !important;
     }
 
     body {
