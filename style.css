@@ -446,6 +446,25 @@ body {
     letter-spacing: 0.05em;
 }
 
+/* ==================== SEO CONTENT ==================== */
+
+.seo-content {
+    padding: var(--spacing-lg) var(--spacing-md);
+    background: var(--bg-secondary);
+}
+
+.seo-content-inner {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.seo-content p {
+    font-size: var(--font-size-base);
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
 /* ==================== FINAL CTA ==================== */
 
 .final-cta {
