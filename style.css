@@ -320,11 +320,80 @@ body {
     line-height: 1.5;
 }
 
+/* ==================== APP GALLERY (Trust-Building) ==================== */
+
+.app-gallery {
+    padding: var(--spacing-xl) var(--spacing-md);
+    background: var(--bg-secondary);
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: var(--font-size-lg);
+    color: var(--text-secondary);
+    margin-top: calc(-1 * var(--spacing-md));
+    margin-bottom: var(--spacing-lg);
+}
+
+.gallery-group {
+    max-width: 1000px;
+    margin: 0 auto var(--spacing-lg);
+}
+
+.gallery-group:last-child {
+    margin-bottom: 0;
+}
+
+.gallery-group-title {
+    text-align: center;
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: var(--spacing-md);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    justify-items: center;
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.gallery-screenshot {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.gallery-screenshot:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-label {
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
 /* ==================== APP PREVIEW / SCREENSHOTS ==================== */
 
 .app-preview {
     padding: var(--spacing-xl) var(--spacing-md);
-    background: var(--bg-secondary);
+    background: var(--bg-primary);
 }
 
 .screenshots-container {
@@ -519,6 +588,29 @@ body {
 
     .screenshot-label {
         font-size: 0.75rem;
+    }
+
+    /* Gallery responsive */
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-sm);
+    }
+
+    .gallery-screenshot {
+        max-width: 100px;
+        border-radius: var(--radius-md);
+    }
+
+    .gallery-label {
+        font-size: 0.7rem;
+    }
+
+    .gallery-group-title {
+        font-size: var(--font-size-base);
+    }
+
+    .section-subtitle {
+        font-size: var(--font-size-base);
     }
 
     .footer-links {
