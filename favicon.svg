@@ -10,11 +10,11 @@
   <rect x="1" y="1" width="30" height="30" rx="6" fill="url(#bg)"/>
 
   <!-- Letter S -->
-  <text x="16" y="22" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">S</text>
+  <text x="16" y="20" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">S</text>
 
-  <!-- Small pencil accent -->
-  <g transform="translate(22, 6) rotate(45)">
-    <rect x="0" y="0" width="3" height="10" rx="0.5" fill="white"/>
-    <polygon points="0,10 3,10 1.5,13" fill="white"/>
+  <!-- Small pencil underneath - horizontal line with tip -->
+  <g transform="translate(9, 24)">
+    <rect x="0" y="0" width="12" height="2.5" rx="0.5" fill="white"/>
+    <polygon points="12,0 12,2.5 15,1.25" fill="white"/>
   </g>
 </svg>
