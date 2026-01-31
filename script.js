@@ -38,7 +38,7 @@ function applyTheme(theme) {
     // Update meta theme-color for mobile browsers
     const metaTheme = document.querySelector('meta[name="theme-color"]');
     if (metaTheme) {
-        metaTheme.content = theme === 'dark' ? '#121212' : '#26A69A';
+        metaTheme.content = theme === 'dark' ? '#121212' : '#FF9800';
     }
 }
 
