@@ -1,6 +1,20 @@
 /* Scrib Landing Page - Minimalist Design */
 /* Warm amber/orange palette matching app icon */
 
+/* ==================== FONT LOADING OPTIMIZATION ==================== */
+/* Ensure text remains visible during font load */
+@font-face {
+    font-family: 'Segoe UI';
+    font-display: swap;
+    src: local('Segoe UI');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-display: swap;
+    src: local('Roboto');
+}
+
 /* ==================== CSS RESET & VARIABLES ==================== */
 
 :root {
