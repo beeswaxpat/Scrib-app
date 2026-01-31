@@ -138,6 +138,18 @@ body {
     max-width: 600px;
 }
 
+.launch-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--accent-warm) 0%, var(--accent-warm-dark) 100%);
+    color: white;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: var(--spacing-md);
+    letter-spacing: 0.02em;
+}
+
 .logo {
     display: flex;
     align-items: center;
