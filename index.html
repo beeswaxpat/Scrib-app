@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#26A69A">
+    <meta name="theme-color" content="#121212">
 
     <!-- SEO Meta Tags -->
-    <title>Scrib App - Free Offline Notes for Android</title>
-    <meta name="description" content="Download Scrib: Minimalist offline notes app with bullets, voice input, and complete privacy. No tracking. No cloud. Just notes.">
-    <meta name="keywords" content="notes app, offline notes, private notes, android notes, minimalist notes, bullet lists, voice notes">
+    <title>Scrib - Free Offline Notes App for Android | No Tracking</title>
+    <meta name="description" content="Scrib: The minimalist offline notes app that respects your privacy. No tracking. No cloud. No accounts. Just notes. Free on Google Play.">
+    <meta name="keywords" content="notes app, offline notes, private notes, android notes, minimalist notes, bullet lists, voice notes, no tracking">
     <meta name="author" content="Beeswax Pat">
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://scrib.app/">
+    <meta property="og:url" content="https://scrib-gz4q.onrender.com/">
     <meta property="og:title" content="Scrib - Private Offline Notes App">
-    <meta property="og:description" content="No tracking. No cloud. Just notes. Download the minimalist notes app that respects your privacy.">
+    <meta property="og:description" content="No tracking. No cloud. Just notes. The minimalist notes app that respects your privacy. Free on Google Play.">
     <meta property="og:image" content="og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -24,13 +24,14 @@
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@BeeswaxPat">
+    <meta name="twitter:creator" content="@BeeswaxPat">
     <meta name="twitter:title" content="Scrib - Private Offline Notes App">
     <meta name="twitter:description" content="No tracking. No cloud. Just notes. Free on Google Play.">
     <meta name="twitter:image" content="og-image.png">
 
     <!-- PWA / Mobile -->
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Scrib">
     <link rel="manifest" href="manifest.json">
 
@@ -42,168 +43,240 @@
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Google Analytics (replace GA_MEASUREMENT_ID with your actual ID) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'GA_MEASUREMENT_ID');
-    </script>
+    <!-- Preload critical assets -->
+    <link rel="preload" href="screenshot-dark.jpg" as="image">
 </head>
 <body>
+    <!-- Skip link for accessibility -->
+    <a href="#main" class="skip-link">Skip to content</a>
+
     <!-- Theme Toggle -->
     <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
-        <span class="theme-icon">🌙</span>
+        <svg class="theme-icon sun" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+            <path fill="currentColor" d="M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,2L14.39,5.42C13.65,5.15 12.84,5 12,5C11.16,5 10.35,5.15 9.61,5.42L12,2M3.34,7L7.5,6.65C6.9,7.16 6.36,7.78 5.94,8.5C5.5,9.24 5.25,10 5.11,10.79L3.34,7M3.36,17L5.12,13.23C5.26,14 5.53,14.78 5.95,15.5C6.37,16.24 6.91,16.86 7.5,17.37L3.36,17M20.65,7L18.88,10.79C18.74,10 18.47,9.23 18.05,8.5C17.63,7.78 17.1,7.15 16.5,6.64L20.65,7M20.64,17L16.5,17.36C17.09,16.85 17.62,16.22 18.04,15.5C18.46,14.77 18.73,14 18.87,13.21L20.64,17M12,22L9.59,18.56C10.33,18.83 11.14,19 12,19C12.82,19 13.63,18.83 14.37,18.56L12,22Z"/>
+        </svg>
+        <svg class="theme-icon moon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+            <path fill="currentColor" d="M17.75,4.09L15.22,6.03L16.13,9.09L13.5,7.28L10.87,9.09L11.78,6.03L9.25,4.09L12.44,4L13.5,1L14.56,4L17.75,4.09M21.25,11L19.61,12.25L20.2,14.23L18.5,13.06L16.8,14.23L17.39,12.25L15.75,11L17.81,10.95L18.5,9L19.19,10.95L21.25,11M18.97,15.95C19.8,15.87 20.69,17.05 20.16,17.8C19.84,18.25 19.5,18.67 19.08,19.07C15.17,23 8.84,23 4.94,19.07C1.03,15.17 1.03,8.83 4.94,4.93C5.34,4.53 5.76,4.17 6.21,3.85C6.96,3.32 8.14,4.21 8.06,5.04C7.79,7.9 8.75,10.87 10.95,13.06C13.14,15.26 16.1,16.22 18.97,15.95Z"/>
+        </svg>
     </button>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-content">
-            <div class="logo">
-                <span class="logo-icon">📝</span>
-                <h1 class="logo-text">Scrib</h1>
-            </div>
-            <p class="tagline">No tracking. No cloud. Just notes.</p>
-            <p class="subtitle">The minimalist notes app that respects your privacy.</p>
+    <main id="main">
+        <!-- Hero Section - Full viewport on mobile -->
+        <header class="hero fade-in">
+            <div class="hero-content">
+                <div class="logo">
+                    <img src="icon-192.png" alt="Scrib app icon" class="logo-icon" width="72" height="72">
+                    <h1 class="logo-text">Scrib</h1>
+                </div>
 
-            <!-- Primary CTA -->
-            <a href="https://play.google.com/store/apps/details?id=com.beeswaxpat.jot"
-               class="cta-button primary"
-               id="mainCta"
-               aria-label="Download Scrib on Google Play">
-                <svg class="play-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-                    <path fill="currentColor" d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                <p class="tagline">No tracking. No cloud. Just notes.</p>
+                <p class="subtitle">The minimalist notes app that respects your privacy.</p>
+
+                <!-- Official Google Play Badge CTA -->
+                <a href="https://play.google.com/store/apps/details?id=com.beeswaxpat.jot"
+                   class="play-badge"
+                   id="heroCta"
+                   aria-label="Get it on Google Play">
+                    <svg viewBox="0 0 180 53.3" width="180" height="53" aria-hidden="true">
+                        <rect width="180" height="53.3" rx="5" fill="#000"/>
+                        <path fill="#fff" d="M62.7,17.3c0,.8-.2,1.4-.7,1.9s-1.1.7-1.9.7a2.6,2.6,0,0,1-1.9-.8,2.7,2.7,0,0,1,0-3.8,2.6,2.6,0,0,1,1.9-.8,2.8,2.8,0,0,1,1,.2,2.1,2.1,0,0,1,.8.6l-.5.5a1.6,1.6,0,0,0-1.3-.6,1.9,1.9,0,0,0-1.4.6,2,2,0,0,0-.5,1.4,2,2,0,0,0,.5,1.4,1.9,1.9,0,0,0,1.4.6,2,2,0,0,0,1.5-.6,1.6,1.6,0,0,0,.4-1H60.1v-.7h2.6Z"/>
+                        <path fill="#fff" d="M67.2,15h-2.4v1.6h2.2v.7H64.8v1.6h2.4v.7H64.1V14.3h3.1Z"/>
+                        <path fill="#fff" d="M70.8,19.6h-.7V15h-1.5v-.7h3.7V15H70.8Z"/>
+                        <path fill="#fff" d="M76.2,19.6V14.3h.7v5.3Z"/>
+                        <path fill="#fff" d="M80.5,19.6h-.7V15H78.3v-.7h3.7V15H80.5Z"/>
+                        <path fill="#fff" d="M90.5,18.8a2.6,2.6,0,0,1-3.7,0,2.7,2.7,0,0,1,0-3.8,2.6,2.6,0,0,1,3.7,0,2.7,2.7,0,0,1,0,3.8Zm-3.2-.5a1.9,1.9,0,0,0,2.7,0,2.1,2.1,0,0,0,0-2.8,1.9,1.9,0,0,0-2.7,0,2.1,2.1,0,0,0,0,2.8Z"/>
+                        <path fill="#fff" d="M92.3,19.6V14.3h.9l2.7,4.1h0v-4.1h.7v5.3h-.7l-2.8-4.3h0v4.3Z"/>
+                        <path fill="#A6A6A6" d="M60.4,28.6a4.2,4.2,0,0,1,4.3,4.3,4.2,4.2,0,0,1-4.3,4.3,4.2,4.2,0,0,1-4.3-4.3A4.2,4.2,0,0,1,60.4,28.6Zm0,6.9a2.5,2.5,0,0,0,2.5-2.6,2.5,2.5,0,1,0-5,0A2.5,2.5,0,0,0,60.4,35.5Zm9.3-6.9a4.2,4.2,0,0,1,4.3,4.3,4.2,4.2,0,0,1-4.3,4.3,4.2,4.2,0,0,1-4.3-4.3A4.2,4.2,0,0,1,69.7,28.6Zm0,6.9a2.5,2.5,0,0,0,2.5-2.6,2.5,2.5,0,1,0-5,0A2.5,2.5,0,0,0,69.7,35.5Zm9-6.9a3.9,3.9,0,0,1,3.9,3.7,4.4,4.4,0,0,1,0,.6H75.4a2.4,2.4,0,0,0,2.5,2.2,2.8,2.8,0,0,0,2.3-1.3l1.4.9a4.4,4.4,0,0,1-3.7,1.9,4.2,4.2,0,0,1-4.3-4.3A4.1,4.1,0,0,1,78.7,28.6Zm2,3.4a2.1,2.1,0,0,0-2-1.8,2.2,2.2,0,0,0-2.1,1.8Zm6.2,5.1V28.8h1.8v1.1h.1a2.8,2.8,0,0,1,2.4-1.3,3.4,3.4,0,0,1,2.4,1,3.7,3.7,0,0,1,.9,2.7v4.8H92.7V32.5a2,2,0,0,0-.5-1.5,1.8,1.8,0,0,0-1.4-.5,2,2,0,0,0-1.5.6,2.4,2.4,0,0,0-.5,1.7v4.3Zm13.2,0V28.8h1.8v1.1h.1a2.4,2.4,0,0,1,2.2-1.3,2.5,2.5,0,0,1,1.3.3l-.7,1.7a1.7,1.7,0,0,0-.9-.2,1.9,1.9,0,0,0-1.5.7,2.8,2.8,0,0,0-.5,1.7v4.3Z"/>
+                        <path fill="#A6A6A6" d="M113.1,35.5l1.6-1a2.7,2.7,0,0,0,2.3,1.3c.9,0,1.4-.4,1.4-1s-.6-.9-1.7-1.3l-.6-.2c-1.6-.5-2.6-1.3-2.6-2.8s1.4-2.8,3.2-2.8a3.4,3.4,0,0,1,3.2,1.8l-1.6.9a1.9,1.9,0,0,0-1.6-1c-.7,0-1.2.4-1.2.9s.6.9,1.6,1.3l.6.2c1.9.6,2.7,1.4,2.7,2.9s-1.4,2.9-3.4,2.9A4,4,0,0,1,113.1,35.5Zm10.2-1V29h-1.1V27.2h1.1V25h1.8v2.2h1.6V29h-1.6v5.3a.9.9,0,0,0,.9,1h.7v1.8h-1.2A2.3,2.3,0,0,1,123.3,34.5Zm4.4-6a4.2,4.2,0,0,1,4.3,4.3,4.2,4.2,0,0,1-4.3,4.3,4.2,4.2,0,0,1-4.3-4.3A4.2,4.2,0,0,1,127.7,28.5Zm0,6.9a2.5,2.5,0,0,0,2.5-2.6,2.5,2.5,0,1,0-5,0A2.5,2.5,0,0,0,127.7,35.4Zm5.9,1.7V28.8h1.8v1.1h.1a2.4,2.4,0,0,1,2.2-1.3,2.5,2.5,0,0,1,1.3.3l-.7,1.7a1.7,1.7,0,0,0-.9-.2,1.9,1.9,0,0,0-1.5.7,2.8,2.8,0,0,0-.5,1.7v4.3Zm10.3.2a4.2,4.2,0,0,1-4.3-4.3,4.2,4.2,0,0,1,4.3-4.3,3.9,3.9,0,0,1,3.9,3.7,4.4,4.4,0,0,1,0,.6h-6.4a2.4,2.4,0,0,0,2.5,2.2,2.8,2.8,0,0,0,2.3-1.3l1.4.9A4.4,4.4,0,0,1,143.9,37.3Zm-2.5-5.2h4.3a2.1,2.1,0,0,0-2-1.8A2.2,2.2,0,0,0,141.4,32.1Z"/>
+                        <path fill="#EA4335" d="M18,25.4l-8.8,9.4a2.4,2.4,0,0,0,0,3L18,47.3l.1-.1,10.5-6a2,2,0,0,0,0-3.4L18.1,31.9"/>
+                        <path fill="#FBBC04" d="M31.1,28.8,28.6,27,18,33.2v2.4l10.6-6Z"/>
+                        <path fill="#4285F4" d="M9.2,15.9a2.3,2.3,0,0,0-.1.8V55.5a2.3,2.3,0,0,0,.1.8l11-10.8V25.6Z"/>
+                        <path fill="#34A853" d="M18.1,36.3l-9,9.4a2.4,2.4,0,0,0,3,0L31.2,34.8Z"/>
+                        <path fill="#EA4335" d="M31.1,28.8,18,21.5l-.1-.1-8.7,9.4a2.4,2.4,0,0,1,0-3l8.9-9.5.1.1L31.1,28.8Z"/>
+                        <path fill="#FBBC04" d="M18,21.5l10.5,6a2,2,0,0,1,1,1.7,2,2,0,0,0-1-1.7Z"/>
+                        <path fill="#4285F4" d="M18,33.2V21.5l-8.8,9.3Z"/>
+                    </svg>
+                </a>
+            </div>
+        </header>
+
+        <!-- Privacy Trust Section -->
+        <section class="privacy-section fade-in" aria-labelledby="privacy-heading">
+            <div class="privacy-content">
+                <svg class="privacy-icon" viewBox="0 0 24 24" width="56" height="56" aria-hidden="true">
+                    <path fill="currentColor" d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.1 14.8,9.5V11C15.4,11 16,11.6 16,12.3V15.8C16,16.4 15.4,17 14.7,17H9.2C8.6,17 8,16.4 8,15.7V12.2C8,11.6 8.6,11 9.2,11V9.5C9.2,8.1 10.6,7 12,7M12,8.2C11.2,8.2 10.5,8.7 10.5,9.5V11H13.5V9.5C13.5,8.7 12.8,8.2 12,8.2Z"/>
                 </svg>
-                <!-- A/B Test: Swap "Get Free" vs "Download Now" -->
-                <span class="cta-text">Get Free on Google Play</span>
-            </a>
+                <div class="privacy-text">
+                    <h2 id="privacy-heading">Zero Data Collected</h2>
+                    <p>Your notes never leave your device. No accounts. No sync. No tracking. Ever.</p>
+                </div>
+            </div>
+        </section>
 
-            <!-- Secondary CTA (comment out to test single CTA) -->
-            <!--
+        <!-- App Showcase - Real Screenshots -->
+        <section class="showcase fade-in" aria-labelledby="showcase-heading">
+            <h2 id="showcase-heading" class="section-title">See it in action</h2>
+
+            <div class="screenshot-grid">
+                <figure class="screenshot-item">
+                    <img src="screenshot-dark.jpg"
+                         alt="Scrib notes list in dark mode showing colorful note cards with different accent colors"
+                         class="screenshot"
+                         loading="lazy"
+                         width="1080"
+                         height="2400">
+                    <figcaption>
+                        <strong>Dark Mode</strong>
+                        <span>Color-coded notes for easy organization</span>
+                    </figcaption>
+                </figure>
+
+                <figure class="screenshot-item">
+                    <img src="screenshot-light.jpg"
+                         alt="Scrib notes list in light mode showing clean minimal interface with colorful notes"
+                         class="screenshot"
+                         loading="lazy"
+                         width="1080"
+                         height="2400">
+                    <figcaption>
+                        <strong>Light Mode</strong>
+                        <span>Clean interface that auto-saves as you type</span>
+                    </figcaption>
+                </figure>
+
+                <figure class="screenshot-item">
+                    <img src="screenshot-settings.jpg"
+                         alt="Scrib settings screen showing theme, text size, accent color, and privacy options"
+                         class="screenshot"
+                         loading="lazy"
+                         width="1080"
+                         height="2400">
+                    <figcaption>
+                        <strong>Customize</strong>
+                        <span>Themes, text sizes, accent colors, voice input</span>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <!-- Mid-page CTA -->
             <a href="https://play.google.com/store/apps/details?id=com.beeswaxpat.jot"
-               class="cta-button secondary">
-                Install Now
+               class="play-badge mid-cta"
+               aria-label="Get it on Google Play">
+                <svg viewBox="0 0 180 53.3" width="160" height="47" aria-hidden="true">
+                    <rect width="180" height="53.3" rx="5" fill="#000"/>
+                    <path fill="#fff" d="M62.7,17.3c0,.8-.2,1.4-.7,1.9s-1.1.7-1.9.7a2.6,2.6,0,0,1-1.9-.8,2.7,2.7,0,0,1,0-3.8,2.6,2.6,0,0,1,1.9-.8,2.8,2.8,0,0,1,1,.2,2.1,2.1,0,0,1,.8.6l-.5.5a1.6,1.6,0,0,0-1.3-.6,1.9,1.9,0,0,0-1.4.6,2,2,0,0,0-.5,1.4,2,2,0,0,0,.5,1.4,1.9,1.9,0,0,0,1.4.6,2,2,0,0,0,1.5-.6,1.6,1.6,0,0,0,.4-1H60.1v-.7h2.6Z"/>
+                    <path fill="#fff" d="M67.2,15h-2.4v1.6h2.2v.7H64.8v1.6h2.4v.7H64.1V14.3h3.1Z"/>
+                    <path fill="#fff" d="M70.8,19.6h-.7V15h-1.5v-.7h3.7V15H70.8Z"/>
+                    <path fill="#fff" d="M76.2,19.6V14.3h.7v5.3Z"/>
+                    <path fill="#fff" d="M80.5,19.6h-.7V15H78.3v-.7h3.7V15H80.5Z"/>
+                    <path fill="#fff" d="M90.5,18.8a2.6,2.6,0,0,1-3.7,0,2.7,2.7,0,0,1,0-3.8,2.6,2.6,0,0,1,3.7,0,2.7,2.7,0,0,1,0,3.8Zm-3.2-.5a1.9,1.9,0,0,0,2.7,0,2.1,2.1,0,0,0,0-2.8,1.9,1.9,0,0,0-2.7,0,2.1,2.1,0,0,0,0,2.8Z"/>
+                    <path fill="#fff" d="M92.3,19.6V14.3h.9l2.7,4.1h0v-4.1h.7v5.3h-.7l-2.8-4.3h0v4.3Z"/>
+                    <path fill="#A6A6A6" d="M60.4,28.6a4.2,4.2,0,0,1,4.3,4.3,4.2,4.2,0,0,1-4.3,4.3,4.2,4.2,0,0,1-4.3-4.3A4.2,4.2,0,0,1,60.4,28.6Zm0,6.9a2.5,2.5,0,0,0,2.5-2.6,2.5,2.5,0,1,0-5,0A2.5,2.5,0,0,0,60.4,35.5Zm9.3-6.9a4.2,4.2,0,0,1,4.3,4.3,4.2,4.2,0,0,1-4.3,4.3,4.2,4.2,0,0,1-4.3-4.3A4.2,4.2,0,0,1,69.7,28.6Zm0,6.9a2.5,2.5,0,0,0,2.5-2.6,2.5,2.5,0,1,0-5,0A2.5,2.5,0,0,0,69.7,35.5Zm9-6.9a3.9,3.9,0,0,1,3.9,3.7,4.4,4.4,0,0,1,0,.6H75.4a2.4,2.4,0,0,0,2.5,2.2,2.8,2.8,0,0,0,2.3-1.3l1.4.9a4.4,4.4,0,0,1-3.7,1.9,4.2,4.2,0,0,1-4.3-4.3A4.1,4.1,0,0,1,78.7,28.6Zm2,3.4a2.1,2.1,0,0,0-2-1.8,2.2,2.2,0,0,0-2.1,1.8Zm6.2,5.1V28.8h1.8v1.1h.1a2.8,2.8,0,0,1,2.4-1.3,3.4,3.4,0,0,1,2.4,1,3.7,3.7,0,0,1,.9,2.7v4.8H92.7V32.5a2,2,0,0,0-.5-1.5,1.8,1.8,0,0,0-1.4-.5,2,2,0,0,0-1.5.6,2.4,2.4,0,0,0-.5,1.7v4.3Zm13.2,0V28.8h1.8v1.1h.1a2.4,2.4,0,0,1,2.2-1.3,2.5,2.5,0,0,1,1.3.3l-.7,1.7a1.7,1.7,0,0,0-.9-.2,1.9,1.9,0,0,0-1.5.7,2.8,2.8,0,0,0-.5,1.7v4.3Z"/>
+                    <path fill="#A6A6A6" d="M113.1,35.5l1.6-1a2.7,2.7,0,0,0,2.3,1.3c.9,0,1.4-.4,1.4-1s-.6-.9-1.7-1.3l-.6-.2c-1.6-.5-2.6-1.3-2.6-2.8s1.4-2.8,3.2-2.8a3.4,3.4,0,0,1,3.2,1.8l-1.6.9a1.9,1.9,0,0,0-1.6-1c-.7,0-1.2.4-1.2.9s.6.9,1.6,1.3l.6.2c1.9.6,2.7,1.4,2.7,2.9s-1.4,2.9-3.4,2.9A4,4,0,0,1,113.1,35.5Zm10.2-1V29h-1.1V27.2h1.1V25h1.8v2.2h1.6V29h-1.6v5.3a.9.9,0,0,0,.9,1h.7v1.8h-1.2A2.3,2.3,0,0,1,123.3,34.5Zm4.4-6a4.2,4.2,0,0,1,4.3,4.3,4.2,4.2,0,0,1-4.3,4.3,4.2,4.2,0,0,1-4.3-4.3A4.2,4.2,0,0,1,127.7,28.5Zm0,6.9a2.5,2.5,0,0,0,2.5-2.6,2.5,2.5,0,1,0-5,0A2.5,2.5,0,0,0,127.7,35.4Zm5.9,1.7V28.8h1.8v1.1h.1a2.4,2.4,0,0,1,2.2-1.3,2.5,2.5,0,0,1,1.3.3l-.7,1.7a1.7,1.7,0,0,0-.9-.2,1.9,1.9,0,0,0-1.5.7,2.8,2.8,0,0,0-.5,1.7v4.3Zm10.3.2a4.2,4.2,0,0,1-4.3-4.3,4.2,4.2,0,0,1,4.3-4.3,3.9,3.9,0,0,1,3.9,3.7,4.4,4.4,0,0,1,0,.6h-6.4a2.4,2.4,0,0,0,2.5,2.2,2.8,2.8,0,0,0,2.3-1.3l1.4.9A4.4,4.4,0,0,1,143.9,37.3Zm-2.5-5.2h4.3a2.1,2.1,0,0,0-2-1.8A2.2,2.2,0,0,0,141.4,32.1Z"/>
+                    <path fill="#EA4335" d="M18,25.4l-8.8,9.4a2.4,2.4,0,0,0,0,3L18,47.3l.1-.1,10.5-6a2,2,0,0,0,0-3.4L18.1,31.9"/>
+                    <path fill="#FBBC04" d="M31.1,28.8,28.6,27,18,33.2v2.4l10.6-6Z"/>
+                    <path fill="#4285F4" d="M9.2,15.9a2.3,2.3,0,0,0-.1.8V55.5a2.3,2.3,0,0,0,.1.8l11-10.8V25.6Z"/>
+                    <path fill="#34A853" d="M18.1,36.3l-9,9.4a2.4,2.4,0,0,0,3,0L31.2,34.8Z"/>
+                    <path fill="#EA4335" d="M31.1,28.8,18,21.5l-.1-.1-8.7,9.4a2.4,2.4,0,0,1,0-3l8.9-9.5.1.1L31.1,28.8Z"/>
+                    <path fill="#FBBC04" d="M18,21.5l10.5,6a2,2,0,0,1,1,1.7,2,2,0,0,0-1-1.7Z"/>
+                    <path fill="#4285F4" d="M18,33.2V21.5l-8.8,9.3Z"/>
+                </svg>
             </a>
-            -->
-        </div>
-    </header>
+        </section>
 
-    <!-- Privacy Badge Section -->
-    <section class="privacy-badge" aria-labelledby="privacy-heading">
-        <div class="badge-content">
-            <span class="badge-icon">🔒</span>
-            <div class="badge-text">
-                <h2 id="privacy-heading">Zero Data Collected</h2>
-                <p>Your notes never leave your device. No accounts. No sync. No tracking.</p>
-            </div>
-        </div>
-    </section>
+        <!-- Benefits Section - Minimal, text-focused -->
+        <section class="benefits fade-in" aria-labelledby="benefits-heading">
+            <h2 id="benefits-heading" class="section-title">Everything you need. Nothing you don't.</h2>
 
-    <!-- Features Section -->
-    <section class="features" aria-labelledby="features-heading">
-        <h2 id="features-heading" class="section-title">Everything you need. Nothing you don't.</h2>
+            <ul class="benefits-list">
+                <li>
+                    <strong>Auto-Save</strong>
+                    <span>Notes save instantly as you type</span>
+                </li>
+                <li>
+                    <strong>Bullet Lists</strong>
+                    <span>One-tap bullet mode for quick lists</span>
+                </li>
+                <li>
+                    <strong>Voice Input</strong>
+                    <span>Dictate notes hands-free</span>
+                </li>
+                <li>
+                    <strong>Themes</strong>
+                    <span>Dark, light, or match your system</span>
+                </li>
+                <li>
+                    <strong>Text Sizes</strong>
+                    <span>Small, medium, or large</span>
+                </li>
+                <li>
+                    <strong>Offline First</strong>
+                    <span>Works without internet, always</span>
+                </li>
+            </ul>
+        </section>
 
-        <div class="features-grid">
-            <article class="feature-card">
-                <span class="feature-icon" aria-hidden="true">📝</span>
-                <h3>Auto-Save</h3>
-                <p>Notes save automatically as you type. Never lose your thoughts.</p>
-            </article>
+        <!-- Final CTA Section -->
+        <section class="final-cta fade-in" aria-labelledby="download-heading">
+            <h2 id="download-heading">Ready to take notes the private way?</h2>
 
-            <article class="feature-card">
-                <span class="feature-icon" aria-hidden="true">•</span>
-                <h3>Bullet Lists</h3>
-                <p>One-tap bullet mode for quick lists and brainstorming sessions.</p>
-            </article>
+            <a href="https://play.google.com/store/apps/details?id=com.beeswaxpat.jot"
+               class="play-badge large"
+               aria-label="Get it on Google Play">
+                <svg viewBox="0 0 180 53.3" width="200" height="59" aria-hidden="true">
+                    <rect width="180" height="53.3" rx="5" fill="#000"/>
+                    <path fill="#fff" d="M62.7,17.3c0,.8-.2,1.4-.7,1.9s-1.1.7-1.9.7a2.6,2.6,0,0,1-1.9-.8,2.7,2.7,0,0,1,0-3.8,2.6,2.6,0,0,1,1.9-.8,2.8,2.8,0,0,1,1,.2,2.1,2.1,0,0,1,.8.6l-.5.5a1.6,1.6,0,0,0-1.3-.6,1.9,1.9,0,0,0-1.4.6,2,2,0,0,0-.5,1.4,2,2,0,0,0,.5,1.4,1.9,1.9,0,0,0,1.4.6,2,2,0,0,0,1.5-.6,1.6,1.6,0,0,0,.4-1H60.1v-.7h2.6Z"/>
+                    <path fill="#fff" d="M67.2,15h-2.4v1.6h2.2v.7H64.8v1.6h2.4v.7H64.1V14.3h3.1Z"/>
+                    <path fill="#fff" d="M70.8,19.6h-.7V15h-1.5v-.7h3.7V15H70.8Z"/>
+                    <path fill="#fff" d="M76.2,19.6V14.3h.7v5.3Z"/>
+                    <path fill="#fff" d="M80.5,19.6h-.7V15H78.3v-.7h3.7V15H80.5Z"/>
+                    <path fill="#fff" d="M90.5,18.8a2.6,2.6,0,0,1-3.7,0,2.7,2.7,0,0,1,0-3.8,2.6,2.6,0,0,1,3.7,0,2.7,2.7,0,0,1,0,3.8Zm-3.2-.5a1.9,1.9,0,0,0,2.7,0,2.1,2.1,0,0,0,0-2.8,1.9,1.9,0,0,0-2.7,0,2.1,2.1,0,0,0,0,2.8Z"/>
+                    <path fill="#fff" d="M92.3,19.6V14.3h.9l2.7,4.1h0v-4.1h.7v5.3h-.7l-2.8-4.3h0v4.3Z"/>
+                    <path fill="#A6A6A6" d="M60.4,28.6a4.2,4.2,0,0,1,4.3,4.3,4.2,4.2,0,0,1-4.3,4.3,4.2,4.2,0,0,1-4.3-4.3A4.2,4.2,0,0,1,60.4,28.6Zm0,6.9a2.5,2.5,0,0,0,2.5-2.6,2.5,2.5,0,1,0-5,0A2.5,2.5,0,0,0,60.4,35.5Zm9.3-6.9a4.2,4.2,0,0,1,4.3,4.3,4.2,4.2,0,0,1-4.3,4.3,4.2,4.2,0,0,1-4.3-4.3A4.2,4.2,0,0,1,69.7,28.6Zm0,6.9a2.5,2.5,0,0,0,2.5-2.6,2.5,2.5,0,1,0-5,0A2.5,2.5,0,0,0,69.7,35.5Zm9-6.9a3.9,3.9,0,0,1,3.9,3.7,4.4,4.4,0,0,1,0,.6H75.4a2.4,2.4,0,0,0,2.5,2.2,2.8,2.8,0,0,0,2.3-1.3l1.4.9a4.4,4.4,0,0,1-3.7,1.9,4.2,4.2,0,0,1-4.3-4.3A4.1,4.1,0,0,1,78.7,28.6Zm2,3.4a2.1,2.1,0,0,0-2-1.8,2.2,2.2,0,0,0-2.1,1.8Zm6.2,5.1V28.8h1.8v1.1h.1a2.8,2.8,0,0,1,2.4-1.3,3.4,3.4,0,0,1,2.4,1,3.7,3.7,0,0,1,.9,2.7v4.8H92.7V32.5a2,2,0,0,0-.5-1.5,1.8,1.8,0,0,0-1.4-.5,2,2,0,0,0-1.5.6,2.4,2.4,0,0,0-.5,1.7v4.3Zm13.2,0V28.8h1.8v1.1h.1a2.4,2.4,0,0,1,2.2-1.3,2.5,2.5,0,0,1,1.3.3l-.7,1.7a1.7,1.7,0,0,0-.9-.2,1.9,1.9,0,0,0-1.5.7,2.8,2.8,0,0,0-.5,1.7v4.3Z"/>
+                    <path fill="#A6A6A6" d="M113.1,35.5l1.6-1a2.7,2.7,0,0,0,2.3,1.3c.9,0,1.4-.4,1.4-1s-.6-.9-1.7-1.3l-.6-.2c-1.6-.5-2.6-1.3-2.6-2.8s1.4-2.8,3.2-2.8a3.4,3.4,0,0,1,3.2,1.8l-1.6.9a1.9,1.9,0,0,0-1.6-1c-.7,0-1.2.4-1.2.9s.6.9,1.6,1.3l.6.2c1.9.6,2.7,1.4,2.7,2.9s-1.4,2.9-3.4,2.9A4,4,0,0,1,113.1,35.5Zm10.2-1V29h-1.1V27.2h1.1V25h1.8v2.2h1.6V29h-1.6v5.3a.9.9,0,0,0,.9,1h.7v1.8h-1.2A2.3,2.3,0,0,1,123.3,34.5Zm4.4-6a4.2,4.2,0,0,1,4.3,4.3,4.2,4.2,0,0,1-4.3,4.3,4.2,4.2,0,0,1-4.3-4.3A4.2,4.2,0,0,1,127.7,28.5Zm0,6.9a2.5,2.5,0,0,0,2.5-2.6,2.5,2.5,0,1,0-5,0A2.5,2.5,0,0,0,127.7,35.4Zm5.9,1.7V28.8h1.8v1.1h.1a2.4,2.4,0,0,1,2.2-1.3,2.5,2.5,0,0,1,1.3.3l-.7,1.7a1.7,1.7,0,0,0-.9-.2,1.9,1.9,0,0,0-1.5.7,2.8,2.8,0,0,0-.5,1.7v4.3Zm10.3.2a4.2,4.2,0,0,1-4.3-4.3,4.2,4.2,0,0,1,4.3-4.3,3.9,3.9,0,0,1,3.9,3.7,4.4,4.4,0,0,1,0,.6h-6.4a2.4,2.4,0,0,0,2.5,2.2,2.8,2.8,0,0,0,2.3-1.3l1.4.9A4.4,4.4,0,0,1,143.9,37.3Zm-2.5-5.2h4.3a2.1,2.1,0,0,0-2-1.8A2.2,2.2,0,0,0,141.4,32.1Z"/>
+                    <path fill="#EA4335" d="M18,25.4l-8.8,9.4a2.4,2.4,0,0,0,0,3L18,47.3l.1-.1,10.5-6a2,2,0,0,0,0-3.4L18.1,31.9"/>
+                    <path fill="#FBBC04" d="M31.1,28.8,28.6,27,18,33.2v2.4l10.6-6Z"/>
+                    <path fill="#4285F4" d="M9.2,15.9a2.3,2.3,0,0,0-.1.8V55.5a2.3,2.3,0,0,0,.1.8l11-10.8V25.6Z"/>
+                    <path fill="#34A853" d="M18.1,36.3l-9,9.4a2.4,2.4,0,0,0,3,0L31.2,34.8Z"/>
+                    <path fill="#EA4335" d="M31.1,28.8,18,21.5l-.1-.1-8.7,9.4a2.4,2.4,0,0,1,0-3l8.9-9.5.1.1L31.1,28.8Z"/>
+                    <path fill="#FBBC04" d="M18,21.5l10.5,6a2,2,0,0,1,1,1.7,2,2,0,0,0-1-1.7Z"/>
+                    <path fill="#4285F4" d="M18,33.2V21.5l-8.8,9.3Z"/>
+                </svg>
+            </a>
 
-            <article class="feature-card">
-                <span class="feature-icon" aria-hidden="true">🎤</span>
-                <h3>Voice Input</h3>
-                <p>Optional speech-to-text. Dictate notes hands-free when you need to.</p>
-            </article>
+            <p class="cta-subtext">Free forever. No ads. No in-app purchases.</p>
+        </section>
+    </main>
 
-            <article class="feature-card">
-                <span class="feature-icon" aria-hidden="true">🎨</span>
-                <h3>Themes & Colors</h3>
-                <p>System, light, or dark mode. 5 accent colors. 8 note colors.</p>
-            </article>
-
-            <article class="feature-card">
-                <span class="feature-icon" aria-hidden="true">Aa</span>
-                <h3>Text Sizes</h3>
-                <p>Small, medium, or large text. Accessible for everyone.</p>
-            </article>
-
-            <article class="feature-card">
-                <span class="feature-icon" aria-hidden="true">📱</span>
-                <h3>Offline First</h3>
-                <p>Works without internet. Your notes are always available.</p>
-            </article>
-        </div>
-    </section>
-
-    <!-- Screenshots / App Preview -->
-    <section class="app-preview" aria-labelledby="preview-heading">
-        <h2 id="preview-heading" class="section-title">Simple. Clean. Fast.</h2>
-        <div class="screenshots-container">
-            <div class="screenshot-wrapper">
-                <img src="screenshot-dark.jpg" alt="Scrib app in dark mode showing colorful notes" class="screenshot" loading="lazy">
-                <span class="screenshot-label">Dark Mode</span>
-            </div>
-            <div class="screenshot-wrapper">
-                <img src="screenshot-light.jpg" alt="Scrib app in light mode showing colorful notes" class="screenshot" loading="lazy">
-                <span class="screenshot-label">Light Mode</span>
-            </div>
-            <div class="screenshot-wrapper">
-                <img src="screenshot-settings.jpg" alt="Scrib settings screen showing theme, text size, and privacy options" class="screenshot" loading="lazy">
-                <span class="screenshot-label">Settings</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA Section -->
-    <section class="final-cta" aria-labelledby="download-heading">
-        <h2 id="download-heading">Ready to take notes the private way?</h2>
-        <a href="https://play.google.com/store/apps/details?id=com.beeswaxpat.jot"
-           class="cta-button primary large"
-           aria-label="Download Scrib on Google Play">
-            <svg class="play-icon" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
-                <path fill="currentColor" d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
-            </svg>
-            Download Free
+    <!-- Sticky Mobile CTA -->
+    <div class="sticky-cta" aria-hidden="true">
+        <a href="https://play.google.com/store/apps/details?id=com.beeswaxpat.jot" class="sticky-button">
+            Get Scrib Free
         </a>
-        <p class="cta-subtext">Free forever. No ads. No in-app purchases.</p>
-    </section>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <div class="footer-brand">
-                <span class="footer-logo">📝 Scrib</span>
-                <p>A minimalist notes app.</p>
-            </div>
+            <p class="footer-brand">
+                <img src="icon-32.png" alt="" width="24" height="24" aria-hidden="true">
+                <strong>Scrib</strong> — A minimalist notes app.
+            </p>
+
             <div class="footer-links">
-                <a href="https://x.com/BeeswaxPat" target="_blank" rel="noopener noreferrer" aria-label="Follow @BeeswaxPat on X">
-                    @BeeswaxPat on X
-                </a>
-                <span class="footer-divider">•</span>
-                <a href="https://play.google.com/store/apps/details?id=com.beeswaxpat.jot" target="_blank" rel="noopener noreferrer">
-                    Google Play
-                </a>
+                <a href="https://x.com/BeeswaxPat" target="_blank" rel="noopener noreferrer">@BeeswaxPat on X</a>
+                <span class="divider">•</span>
+                <a href="https://play.google.com/store/apps/details?id=com.beeswaxpat.jot" target="_blank" rel="noopener noreferrer">Google Play</a>
             </div>
+
             <p class="footer-privacy">
                 <strong>Privacy Promise:</strong> Scrib collects zero data. Your notes stay on your device. Period.
             </p>
-            <p class="footer-copyright">© 2026 Beeswax Pat. Made with 💙 and Claude.</p>
+
+            <p class="footer-copyright">© 2026 Beeswax Pat</p>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
 </html>
