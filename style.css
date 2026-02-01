@@ -18,16 +18,21 @@
 /* ==================== CSS RESET & VARIABLES ==================== */
 
 :root {
-    /* Primary accent - muted, professional orange (Tailwind-inspired) */
+    /* Primary accent - warm orange for CTAs */
     --accent: #f97316;
     --accent-dark: #ea580c;
     --accent-light: #fb923c;
     --accent-subtle: #fdba74;
 
-    /* Secondary accent - deep slate for contrast */
-    --accent-secondary: #37474F;
-    --accent-secondary-dark: #263238;
-    --accent-secondary-light: #546E7A;
+    /* Cyan accent - tech/trust vibe (for badges, icons) */
+    --cyan: #06b6d4;
+    --cyan-dark: #0891b2;
+    --cyan-light: #22d3ee;
+
+    /* Pink accent - Miami/retro vibe (for taglines, highlights) */
+    --pink: #ec4899;
+    --pink-dark: #db2777;
+    --pink-light: #f472b6;
 
     /* Light mode */
     --bg-primary: #FAFAFA;
@@ -155,7 +160,7 @@ body {
 
 .launch-badge {
     display: inline-block;
-    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+    background: linear-gradient(135deg, var(--cyan) 0%, var(--cyan-dark) 100%);
     color: white;
     font-size: var(--font-size-sm);
     font-weight: 600;
@@ -163,6 +168,7 @@ body {
     border-radius: 20px;
     margin-bottom: var(--spacing-md);
     letter-spacing: 0.02em;
+    box-shadow: 0 2px 12px rgba(6, 182, 212, 0.3);
 }
 
 .logo {
@@ -187,7 +193,7 @@ body {
 .tagline {
     font-size: var(--font-size-xl);
     font-weight: 600;
-    color: var(--accent);
+    color: var(--pink);
     margin-bottom: var(--spacing-xs);
 }
 
@@ -283,7 +289,7 @@ body {
 .badge-text h2 {
     font-size: var(--font-size-xl);
     font-weight: 700;
-    color: var(--accent);
+    color: var(--cyan);
     margin-bottom: var(--spacing-xs);
 }
 
@@ -375,7 +381,7 @@ body {
     text-align: center;
     font-size: var(--font-size-lg);
     font-weight: 600;
-    color: var(--accent);
+    color: var(--pink-light);
     margin-bottom: var(--spacing-md);
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -558,14 +564,14 @@ body {
 }
 
 .footer-links a {
-    color: var(--accent);
+    color: var(--cyan);
     text-decoration: none;
     font-weight: 500;
     transition: color var(--transition-fast);
 }
 
 .footer-links a:hover {
-    color: var(--accent-dark);
+    color: var(--cyan-light);
     text-decoration: underline;
 }
 
@@ -584,7 +590,7 @@ body {
 }
 
 .footer-privacy strong {
-    color: var(--accent);
+    color: var(--cyan);
 }
 
 .footer-copyright {
