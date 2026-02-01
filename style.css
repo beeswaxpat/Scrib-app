@@ -1,46 +1,31 @@
-/* Scrib Landing Page - Minimalist Design */
-/* Warm amber/orange palette matching app icon */
-
-/* ==================== FONT LOADING OPTIMIZATION ==================== */
-/* Ensure text remains visible during font load */
-@font-face {
-    font-family: 'Segoe UI';
-    font-display: swap;
-    src: local('Segoe UI');
-}
-
-@font-face {
-    font-family: 'Roboto';
-    font-display: swap;
-    src: local('Roboto');
-}
+/* Scrib Landing Page - 2026 Minimalist Design */
+/* Calm, trustworthy palette: Blue CTAs, Green privacy, Orange accents */
 
 /* ==================== CSS RESET & VARIABLES ==================== */
 
 :root {
-    /* Primary accent - warm orange for CTAs */
-    --accent: #f97316;
-    --accent-dark: #ea580c;
-    --accent-light: #fb923c;
-    --accent-subtle: #fdba74;
+    /* Primary accent - trustworthy blue for CTAs */
+    --accent: #007BFF;
+    --accent-dark: #0056b3;
+    --accent-light: #3395ff;
 
-    /* Cyan accent - tech/trust vibe (for badges, icons) */
-    --cyan: #06b6d4;
-    --cyan-dark: #0891b2;
-    --cyan-light: #22d3ee;
+    /* Privacy/trust accent - muted green */
+    --green: #4CAF50;
+    --green-dark: #388E3C;
+    --green-light: #66BB6A;
 
-    /* Pink accent - Miami/retro vibe (for taglines, highlights) */
-    --pink: #ec4899;
-    --pink-dark: #db2777;
-    --pink-light: #f472b6;
+    /* Energetic touch - warm orange (minimal use) */
+    --orange: #FF9800;
+    --orange-dark: #F57C00;
+    --orange-light: #FFB74D;
 
     /* Light mode */
-    --bg-primary: #FAFAFA;
-    --bg-secondary: #FFFFFF;
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F5F5F5;
     --bg-card: #FFFFFF;
-    --text-primary: #1A1A1A;
-    --text-secondary: #666666;
-    --text-muted: #999999;
+    --text-primary: #333333;
+    --text-secondary: #757575;
+    --text-muted: #9E9E9E;
     --border: #E0E0E0;
     --shadow: rgba(0, 0, 0, 0.08);
     --shadow-hover: rgba(0, 0, 0, 0.12);
@@ -52,8 +37,9 @@
     --spacing-lg: 48px;
     --spacing-xl: 64px;
 
-    /* Typography */
-    --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    /* Typography - Inter for headings, Roboto for body */
+    --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'Roboto', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
     --font-size-sm: 0.875rem;
     --font-size-base: 1rem;
     --font-size-lg: 1.25rem;
@@ -72,15 +58,15 @@
     --transition-normal: 250ms ease;
 }
 
-/* Dark mode - deep, premium dark with restrained orange accents */
+/* Dark mode - calm, accessible dark theme */
 [data-theme="dark"] {
-    --bg-primary: #0f0f0f;
-    --bg-secondary: #141414;
-    --bg-card: #1a1a1a;
-    --text-primary: #f5f5f5;
-    --text-secondary: #a3a3a3;
-    --text-muted: #737373;
-    --border: #262626;
+    --bg-primary: #1A1A1A;
+    --bg-secondary: #121212;
+    --bg-card: #242424;
+    --text-primary: #F5F5F5;
+    --text-secondary: #B0B0B0;
+    --text-muted: #808080;
+    --border: #333333;
     --shadow: rgba(0, 0, 0, 0.4);
     --shadow-hover: rgba(0, 0, 0, 0.5);
 }
@@ -98,7 +84,7 @@ html {
 }
 
 body {
-    font-family: var(--font-family);
+    font-family: var(--font-body);
     font-size: var(--font-size-base);
     line-height: 1.6;
     color: var(--text-primary);
@@ -106,6 +92,7 @@ body {
     transition: background-color var(--transition-normal), color var(--transition-normal);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 /* ==================== THEME TOGGLE ==================== */
@@ -151,24 +138,33 @@ body {
     justify-content: center;
     text-align: center;
     padding: var(--spacing-lg) var(--spacing-md);
-    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+    background: var(--bg-secondary);
 }
 
 .hero-content {
     max-width: 600px;
+    padding: var(--spacing-lg);
+    background: var(--bg-primary);
+    border-radius: var(--radius-xl);
+    box-shadow: 0 4px 24px var(--shadow);
+}
+
+[data-theme="dark"] .hero-content {
+    background: var(--bg-card);
 }
 
 .launch-badge {
     display: inline-block;
-    background: linear-gradient(135deg, var(--cyan) 0%, var(--cyan-dark) 100%);
+    background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
     color: white;
+    font-family: var(--font-heading);
     font-size: var(--font-size-sm);
     font-weight: 600;
     padding: 6px 16px;
     border-radius: 20px;
     margin-bottom: var(--spacing-md);
     letter-spacing: 0.02em;
-    box-shadow: 0 2px 12px rgba(6, 182, 212, 0.3);
+    box-shadow: 0 2px 12px rgba(76, 175, 80, 0.3);
 }
 
 .logo {
@@ -184,6 +180,7 @@ body {
 }
 
 .logo-text {
+    font-family: var(--font-heading);
     font-size: var(--font-size-3xl);
     font-weight: 700;
     color: var(--text-primary);
@@ -191,13 +188,15 @@ body {
 }
 
 .tagline {
+    font-family: var(--font-body);
     font-size: var(--font-size-xl);
-    font-weight: 600;
-    color: var(--pink);
+    font-weight: 500;
+    color: var(--green);
     margin-bottom: var(--spacing-xs);
 }
 
 .subtitle {
+    font-family: var(--font-body);
     font-size: var(--font-size-lg);
     color: var(--text-secondary);
     margin-bottom: var(--spacing-lg);
@@ -211,6 +210,7 @@ body {
     justify-content: center;
     gap: var(--spacing-xs);
     padding: var(--spacing-sm) var(--spacing-md);
+    font-family: var(--font-heading);
     font-size: var(--font-size-base);
     font-weight: 600;
     text-decoration: none;
@@ -223,13 +223,13 @@ body {
 .cta-button.primary {
     background: var(--accent);
     color: white;
-    box-shadow: 0 4px 16px rgba(249, 115, 22, 0.25);
+    box-shadow: 0 4px 16px rgba(0, 123, 255, 0.25);
 }
 
 .cta-button.primary:hover {
-    background: var(--accent-light);
+    background: var(--accent-dark);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(249, 115, 22, 0.35);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.35);
 }
 
 .cta-button.primary:active {
@@ -267,10 +267,9 @@ body {
 /* ==================== PRIVACY BADGE ==================== */
 
 .privacy-badge {
-    background: var(--bg-card);
+    background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
     padding: var(--spacing-lg) var(--spacing-md);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
+    color: white;
 }
 
 .badge-content {
@@ -284,17 +283,19 @@ body {
 .badge-icon {
     font-size: 3rem;
     flex-shrink: 0;
+    filter: brightness(0) invert(1);
 }
 
 .badge-text h2 {
+    font-family: var(--font-heading);
     font-size: var(--font-size-xl);
-    font-weight: 700;
-    color: var(--cyan);
+    font-weight: 600;
+    color: white;
     margin-bottom: var(--spacing-xs);
 }
 
 .badge-text p {
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.9);
     font-size: var(--font-size-base);
 }
 
@@ -307,8 +308,9 @@ body {
 
 .section-title {
     text-align: center;
+    font-family: var(--font-heading);
     font-size: var(--font-size-2xl);
-    font-weight: 700;
+    font-weight: 600;
     color: var(--text-primary);
     margin-bottom: var(--spacing-lg);
 }
@@ -338,9 +340,11 @@ body {
     font-size: 2.5rem;
     display: block;
     margin-bottom: var(--spacing-sm);
+    color: var(--orange);
 }
 
 .feature-card h3 {
+    font-family: var(--font-heading);
     font-size: var(--font-size-lg);
     font-weight: 600;
     color: var(--text-primary);
@@ -348,6 +352,7 @@ body {
 }
 
 .feature-card p {
+    font-family: var(--font-body);
     color: var(--text-secondary);
     font-size: var(--font-size-sm);
     line-height: 1.5;
@@ -379,9 +384,10 @@ body {
 
 .gallery-group-title {
     text-align: center;
+    font-family: var(--font-heading);
     font-size: var(--font-size-lg);
     font-weight: 600;
-    color: var(--pink-light);
+    color: var(--accent);
     margin-bottom: var(--spacing-md);
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -407,15 +413,18 @@ body {
     height: auto;
     border-radius: var(--radius-lg);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
-    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+    border: 2px solid transparent;
 }
 
 .gallery-screenshot:hover {
     transform: translateY(-6px) scale(1.02);
     box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+    border-color: var(--green);
 }
 
 .gallery-label {
+    font-family: var(--font-body);
     font-size: var(--font-size-sm);
     font-weight: 500;
     color: var(--text-secondary);
@@ -481,6 +490,7 @@ body {
 }
 
 .seo-content p {
+    font-family: var(--font-body);
     font-size: var(--font-size-base);
     color: var(--text-secondary);
     line-height: 1.7;
@@ -491,38 +501,34 @@ body {
 .final-cta {
     padding: var(--spacing-xl) var(--spacing-md);
     text-align: center;
-    background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
-    color: var(--text-primary);
-    border-top: 1px solid var(--accent);
-}
-
-[data-theme="dark"] .final-cta {
-    background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
 }
 
 .final-cta h2 {
+    font-family: var(--font-heading);
     font-size: var(--font-size-2xl);
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: var(--spacing-md);
-    color: #f5f5f5;
+    color: var(--text-primary);
 }
 
 .final-cta .cta-button.primary {
     background: var(--accent);
     color: white;
-    box-shadow: 0 4px 16px rgba(249, 115, 22, 0.3);
+    box-shadow: 0 4px 16px rgba(0, 123, 255, 0.3);
 }
 
 .final-cta .cta-button.primary:hover {
-    background: var(--accent-light);
+    background: var(--accent-dark);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
 }
 
 .cta-subtext {
     margin-top: var(--spacing-sm);
     font-size: var(--font-size-sm);
-    color: #a3a3a3;
+    color: var(--text-secondary);
 }
 
 /* ==================== FOOTER ==================== */
@@ -544,6 +550,7 @@ body {
 }
 
 .footer-logo {
+    font-family: var(--font-heading);
     font-size: var(--font-size-xl);
     font-weight: 700;
     color: var(--text-primary);
@@ -564,14 +571,14 @@ body {
 }
 
 .footer-links a {
-    color: var(--cyan);
+    color: var(--accent);
     text-decoration: none;
     font-weight: 500;
     transition: color var(--transition-fast);
 }
 
 .footer-links a:hover {
-    color: var(--cyan-light);
+    color: var(--accent-dark);
     text-decoration: underline;
 }
 
@@ -590,7 +597,8 @@ body {
 }
 
 .footer-privacy strong {
-    color: var(--cyan);
+    font-family: var(--font-heading);
+    color: var(--green);
 }
 
 .footer-copyright {
@@ -724,7 +732,7 @@ body {
 /* Focus styles for keyboard navigation */
 a:focus-visible,
 button:focus-visible {
-    outline: 2px solid var(--accent);
+    outline: 3px solid var(--accent);
     outline-offset: 2px;
 }
 
@@ -735,6 +743,7 @@ button:focus-visible {
     left: 0;
     background: var(--accent);
     color: white;
+    font-family: var(--font-heading);
     padding: var(--spacing-xs) var(--spacing-sm);
     z-index: 9999;
     transition: top var(--transition-fast);
@@ -748,10 +757,22 @@ button:focus-visible {
 @media (prefers-contrast: high) {
     :root {
         --border: #000000;
+        --text-primary: #000000;
+        --text-secondary: #333333;
     }
 
     [data-theme="dark"] {
         --border: #FFFFFF;
+        --text-primary: #FFFFFF;
+        --text-secondary: #E0E0E0;
+    }
+
+    .cta-button.primary {
+        border: 2px solid white;
+    }
+
+    .privacy-badge {
+        border: 2px solid white;
     }
 }
 
@@ -777,12 +798,14 @@ button:focus-visible {
     padding: var(--spacing-sm);
     background: var(--accent);
     color: white;
+    font-family: var(--font-heading);
     font-size: var(--font-size-base);
     font-weight: 600;
     text-align: center;
     text-decoration: none;
     border-radius: var(--radius-md);
     transition: background var(--transition-fast);
+    box-shadow: 0 2px 12px rgba(0, 123, 255, 0.3);
 }
 
 .sticky-button:active {
