@@ -286,6 +286,13 @@ body {
     filter: brightness(0) invert(1);
 }
 
+.badge-icon-svg {
+    flex-shrink: 0;
+    color: white;
+    width: 48px;
+    height: 48px;
+}
+
 .badge-text h2 {
     font-family: var(--font-heading);
     font-size: var(--font-size-xl);
@@ -627,6 +634,10 @@ body {
         font-size: 2.5rem;
     }
 
+    .privacy-badge {
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+
     .badge-content {
         flex-direction: column;
         text-align: center;
@@ -634,6 +645,11 @@ body {
 
     .badge-icon {
         font-size: 2.5rem;
+    }
+
+    .badge-icon-svg {
+        width: 40px;
+        height: 40px;
     }
 
     .features-grid {
