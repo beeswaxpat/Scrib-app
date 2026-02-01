@@ -179,6 +179,12 @@ body {
     font-size: 3.5rem;
 }
 
+.logo-icon-img {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-md);
+}
+
 .logo-text {
     font-family: var(--font-heading);
     font-size: var(--font-size-3xl);
@@ -557,10 +563,19 @@ body {
 }
 
 .footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
     font-family: var(--font-heading);
     font-size: var(--font-size-xl);
     font-weight: 700;
     color: var(--text-primary);
+}
+
+.footer-logo-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
 }
 
 .footer-brand p {
@@ -632,6 +647,11 @@ body {
 
     .logo-icon {
         font-size: 2.5rem;
+    }
+
+    .logo-icon-img {
+        width: 52px;
+        height: 52px;
     }
 
     .privacy-badge {
