@@ -18,10 +18,11 @@
 /* ==================== CSS RESET & VARIABLES ==================== */
 
 :root {
-    /* Primary accent - warm amber/orange (from app icon #FFB74D to #FF9800) */
-    --accent: #FF9800;
-    --accent-dark: #F57C00;
-    --accent-light: #FFB74D;
+    /* Primary accent - muted, professional orange (Tailwind-inspired) */
+    --accent: #f97316;
+    --accent-dark: #ea580c;
+    --accent-light: #fb923c;
+    --accent-subtle: #fdba74;
 
     /* Secondary accent - deep slate for contrast */
     --accent-secondary: #37474F;
@@ -66,17 +67,17 @@
     --transition-normal: 250ms ease;
 }
 
-/* Dark mode */
+/* Dark mode - deep, premium dark with restrained orange accents */
 [data-theme="dark"] {
-    --bg-primary: #121212;
-    --bg-secondary: #1E1E1E;
-    --bg-card: #252525;
-    --text-primary: #FAFAFA;
-    --text-secondary: #B0B0B0;
-    --text-muted: #808080;
-    --border: #333333;
-    --shadow: rgba(0, 0, 0, 0.3);
-    --shadow-hover: rgba(0, 0, 0, 0.4);
+    --bg-primary: #0f0f0f;
+    --bg-secondary: #141414;
+    --bg-card: #1a1a1a;
+    --text-primary: #f5f5f5;
+    --text-secondary: #a3a3a3;
+    --text-muted: #737373;
+    --border: #262626;
+    --shadow: rgba(0, 0, 0, 0.4);
+    --shadow-hover: rgba(0, 0, 0, 0.5);
 }
 
 /* ==================== BASE STYLES ==================== */
@@ -216,13 +217,13 @@ body {
 .cta-button.primary {
     background: var(--accent);
     color: white;
-    box-shadow: 0 4px 16px rgba(255, 152, 0, 0.3);
+    box-shadow: 0 4px 16px rgba(249, 115, 22, 0.25);
 }
 
 .cta-button.primary:hover {
-    background: var(--accent-dark);
+    background: var(--accent-light);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4);
+    box-shadow: 0 6px 20px rgba(249, 115, 22, 0.35);
 }
 
 .cta-button.primary:active {
@@ -484,31 +485,38 @@ body {
 .final-cta {
     padding: var(--spacing-xl) var(--spacing-md);
     text-align: center;
-    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
-    color: white;
+    background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+    color: var(--text-primary);
+    border-top: 1px solid var(--accent);
+}
+
+[data-theme="dark"] .final-cta {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
 }
 
 .final-cta h2 {
     font-size: var(--font-size-2xl);
     font-weight: 700;
     margin-bottom: var(--spacing-md);
+    color: #f5f5f5;
 }
 
 .final-cta .cta-button.primary {
-    background: white;
-    color: var(--accent-dark);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    background: var(--accent);
+    color: white;
+    box-shadow: 0 4px 16px rgba(249, 115, 22, 0.3);
 }
 
 .final-cta .cta-button.primary:hover {
-    background: #F5F5F5;
+    background: var(--accent-light);
     transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
 }
 
 .cta-subtext {
     margin-top: var(--spacing-sm);
     font-size: var(--font-size-sm);
-    opacity: 0.9;
+    color: #a3a3a3;
 }
 
 /* ==================== FOOTER ==================== */
