@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-default-lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,25 +28,66 @@
     <meta name="twitter:description" content="No cloud. No tracking. Just notes. Minimalist, accessible, and 100% private.">
     <meta name="twitter:image" content="https://scrib-gz4q.onrender.com/og-image.png">
 
-    <!-- JSON-LD Schema for Rich Results -->
+    <!-- JSON-LD Schema for Rich Results - Enhanced for AI Discoverability -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
       "name": "Scrib",
-      "operatingSystem": "Android",
-      "applicationCategory": "Productivity",
+      "alternateName": "Scrib Notes",
+      "operatingSystem": "Android 8.0+",
+      "applicationCategory": "UtilitiesApplication",
+      "applicationSubCategory": "Notes & Journals",
+      "description": "Scrib is the best offline notes app for Android privacy seekers. A minimalist, privacy-first notepad with secure on-device storage—no tracking, no cloud sync, no accounts required. Your notes never leave your phone.",
+      "keywords": ["privacy-first notes", "offline notepad", "no tracking app", "secure local storage", "on-device only", "private notes android", "offline notes app", "no cloud notes", "minimalist notepad"],
+      "featureList": ["Auto-save", "Color coding", "Voice input", "Full accessibility", "Dark mode", "Bullet lists", "Export to TXT", "No ads", "No tracking", "Works offline"],
+      "screenshot": "https://scrib-gz4q.onrender.com/og-image.png",
+      "image": "https://scrib-gz4q.onrender.com/app-icon-512.png",
+      "url": "https://scrib-gz4q.onrender.com/",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.beeswaxpat.jot",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.beeswaxpat.jot",
+      "softwareVersion": "1.6.0",
+      "datePublished": "2026-01-15",
+      "inLanguage": ["en", "es", "fr", "de", "pt", "ja", "ko", "zh", "ar", "hi"],
+      "isAccessibleForFree": true,
       "offers": {
         "@type": "Offer",
         "price": "0",
-        "priceCurrency": "USD"
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
       },
-      "description": "Free offline privacy-first minimalist notes app for Android. No tracking, no cloud, no accounts.",
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5",
-        "ratingCount": "1"
+        "ratingCount": "1",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Beeswax Pat",
+        "url": "https://x.com/BeeswaxPat"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Beeswax Pat"
+      },
+      "maintainer": {
+        "@type": "Organization",
+        "name": "Beeswax Pat"
       }
+    }
+    </script>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Beeswax Pat",
+      "url": "https://scrib-gz4q.onrender.com/",
+      "logo": "https://scrib-gz4q.onrender.com/app-icon-512.png",
+      "sameAs": ["https://x.com/BeeswaxPat"]
     }
     </script>
 
@@ -82,16 +123,16 @@
     </button>
 
     <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-content">
+    <header class="hero" role="banner" aria-label="App Introduction">
+        <div class="hero-content" itemscope itemtype="https://schema.org/SoftwareApplication">
             <!-- TODO: Uncomment when live: <span class="launch-badge">✅ Now Available on Google Play</span> -->
             <span class="launch-badge">🚀 Launching Soon on Google Play</span>
             <div class="logo">
-                <img src="app-icon-512.png" alt="Scrib app icon" class="logo-icon-img" width="64" height="64">
-                <h1 class="logo-text">Scrib</h1>
+                <img src="app-icon-512.png" alt="Scrib Logo: Privacy-First Notes App for Android" class="logo-icon-img" width="64" height="64" itemprop="image">
+                <h1 class="logo-text" itemprop="name">Scrib</h1>
             </div>
-            <p class="tagline">No tracking. No cloud. Just notes.</p>
-            <p class="subtitle">100% Private • No Login Required • Works Completely Offline</p>
+            <p class="tagline" itemprop="slogan">No tracking. No cloud. Just notes.</p>
+            <p class="subtitle">100% Private • No Login Required • On-Device Only • Works Completely Offline</p>
 
             <!-- Primary CTA -->
             <a href="https://play.google.com/store/apps/details?id=com.beeswaxpat.jot"
@@ -107,75 +148,76 @@
     </header>
 
     <!-- Privacy Badge Section -->
-    <section class="privacy-badge fade-in" aria-labelledby="privacy-heading">
+    <section class="privacy-badge fade-in" role="region" aria-labelledby="privacy-heading">
         <div class="badge-content">
-            <svg class="badge-icon-svg" viewBox="0 0 24 24" width="48" height="48" aria-hidden="true">
+            <svg class="badge-icon-svg" viewBox="0 0 24 24" width="48" height="48" aria-hidden="true" role="img">
+                <title>Privacy lock icon</title>
                 <path fill="currentColor" d="M12 1C8.676 1 6 3.676 6 7v2H4v14h16V9h-2V7c0-3.324-2.676-6-6-6zm0 2c2.276 0 4 1.724 4 4v2H8V7c0-2.276 1.724-4 4-4zm-6 8h12v10H6V11zm6 3a2 2 0 0 0-1 3.732V20h2v-2.268A2 2 0 0 0 12 14z"/>
             </svg>
             <div class="badge-text">
                 <h2 id="privacy-heading">Zero Data Collected</h2>
-                <p>A private notes app with no account required. Your notes never leave your device — no sync, no tracking, no internet needed.</p>
+                <p>A private notes app with no account required. Your notes never leave your device — no sync, no tracking, no internet needed. Secure on-device storage only.</p>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="features fade-in" aria-labelledby="features-heading">
+    <section class="features fade-in" role="region" aria-labelledby="features-heading">
         <h2 id="features-heading" class="section-title">Everything you need. Nothing you don't.</h2>
 
-        <div class="features-grid">
-            <article class="feature-card">
+        <div class="features-grid" role="list">
+            <article class="feature-card" role="listitem">
                 <span class="feature-icon" aria-hidden="true">📝</span>
                 <h3>Auto-Save</h3>
-                <p>Notes save automatically as you type. Never lose your thoughts.</p>
+                <p>Notes save automatically as you type. Never lose your thoughts with instant on-device backup.</p>
             </article>
 
-            <article class="feature-card">
+            <article class="feature-card" role="listitem">
                 <span class="feature-icon" aria-hidden="true">•</span>
                 <h3>Bullet Lists</h3>
                 <p>One-tap bullet mode for quick lists and brainstorming sessions.</p>
             </article>
 
-            <article class="feature-card">
+            <article class="feature-card" role="listitem">
                 <span class="feature-icon" aria-hidden="true">🎤</span>
                 <h3>Voice Input</h3>
                 <p>Optional speech-to-text. Dictate notes hands-free when you need to.</p>
             </article>
 
-            <article class="feature-card">
+            <article class="feature-card" role="listitem">
                 <span class="feature-icon" aria-hidden="true">🎨</span>
                 <h3>Themes & Colors</h3>
-                <p>System, light, or dark mode. 5 accent colors. 8 note colors.</p>
+                <p>System, light, or dark mode. 5 accent colors. 8 note colors for organization.</p>
             </article>
 
-            <article class="feature-card">
+            <article class="feature-card" role="listitem">
                 <span class="feature-icon" aria-hidden="true">Aa</span>
                 <h3>Text Sizes</h3>
-                <p>Small, medium, or large text. Accessible for everyone.</p>
+                <p>Small, medium, or large text. Accessible for everyone, everywhere.</p>
             </article>
 
-            <article class="feature-card">
+            <article class="feature-card" role="listitem">
                 <span class="feature-icon" aria-hidden="true">📱</span>
                 <h3>Offline First</h3>
-                <p>An offline notepad for Android that works without internet. Your notes are always available.</p>
+                <p>An offline notepad for Android that works without internet. On-device only — your notes are always available.</p>
             </article>
 
-            <article class="feature-card">
+            <article class="feature-card" role="listitem">
                 <span class="feature-icon" aria-hidden="true">♿</span>
-                <h3>Accessible</h3>
-                <p>Screen reader friendly. Designed for everyone to use comfortably.</p>
+                <h3>Full Accessibility</h3>
+                <p>Screen reader friendly with TalkBack support. Designed for everyone to use comfortably.</p>
             </article>
 
-            <article class="feature-card">
+            <article class="feature-card" role="listitem">
                 <span class="feature-icon" aria-hidden="true">🚫</span>
                 <h3>No Ads Ever</h3>
-                <p>No ads. No tracking. No data collection. Just a clean notes app.</p>
+                <p>No ads. No tracking. No data collection. A truly private notes app.</p>
             </article>
         </div>
     </section>
 
     <!-- App Gallery - Trust-Building Screenshots -->
-    <section class="app-gallery fade-in" aria-labelledby="gallery-heading">
+    <section class="app-gallery fade-in" role="region" aria-labelledby="gallery-heading">
         <h2 id="gallery-heading" class="section-title">See What You'll Get</h2>
         <p class="section-subtitle">A guided onboarding and beautiful note-taking experience</p>
 
@@ -183,18 +225,18 @@
         <div class="gallery-group">
             <h3 class="gallery-group-title">Quick Onboarding</h3>
             <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="onboarding-create.jpg" alt="Scrib privacy-focused onboarding screen showing Create Notes with blue accent" class="gallery-screenshot" loading="lazy">
-                    <span class="gallery-label">Create Notes</span>
-                </div>
-                <div class="gallery-item">
-                    <img src="onboarding-colors.jpg" alt="Scrib privacy-focused onboarding screen showing Customize Colors with purple accent" class="gallery-screenshot" loading="lazy">
-                    <span class="gallery-label">Pick Your Colors</span>
-                </div>
-                <div class="gallery-item">
-                    <img src="onboarding-privacy.jpg" alt="Scrib privacy-focused onboarding screen showing Your Privacy Matters with green accent" class="gallery-screenshot" loading="lazy">
-                    <span class="gallery-label">Privacy First</span>
-                </div>
+                <figure class="gallery-item">
+                    <img src="onboarding-create.jpg" alt="Scrib privacy-first onboarding: Create Notes screen with secure on-device storage indicator" class="gallery-screenshot" loading="lazy">
+                    <figcaption class="gallery-label">Create Notes</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="onboarding-colors.jpg" alt="Scrib offline notepad: Customize Colors screen showing theme personalization options" class="gallery-screenshot" loading="lazy">
+                    <figcaption class="gallery-label">Pick Your Colors</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="onboarding-privacy.jpg" alt="Scrib no-tracking app: Your Privacy Matters screen emphasizing zero data collection" class="gallery-screenshot" loading="lazy">
+                    <figcaption class="gallery-label">Privacy First</figcaption>
+                </figure>
             </div>
         </div>
 
@@ -202,31 +244,31 @@
         <div class="gallery-group">
             <h3 class="gallery-group-title">Your Notes, Your Way</h3>
             <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="notes-dark.jpg" alt="Scrib notes list in dark mode with accent colors showing yellow, purple and dark colored notes" class="gallery-screenshot" loading="lazy">
-                    <span class="gallery-label">Dark Mode</span>
-                </div>
-                <div class="gallery-item">
-                    <img src="notes-light.jpg" alt="Scrib notes list in light mode with color coding showing yellow, purple and blue notes" class="gallery-screenshot" loading="lazy">
-                    <span class="gallery-label">Light Mode</span>
-                </div>
-                <div class="gallery-item">
-                    <img src="settings-screen.jpg" alt="Scrib settings with theme, text size, and accent color options" class="gallery-screenshot" loading="lazy">
-                    <span class="gallery-label">Customize Settings</span>
-                </div>
+                <figure class="gallery-item">
+                    <img src="notes-dark.jpg" alt="Scrib dark mode notes list with privacy-focused color coding (on-device only storage)" class="gallery-screenshot" loading="lazy">
+                    <figcaption class="gallery-label">Dark Mode</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="notes-light.jpg" alt="Scrib light mode notes list showing secure local notes with color organization" class="gallery-screenshot" loading="lazy">
+                    <figcaption class="gallery-label">Light Mode</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="settings-screen.jpg" alt="Scrib settings: theme, text size, and accent color customization for accessible note-taking" class="gallery-screenshot" loading="lazy">
+                    <figcaption class="gallery-label">Customize Settings</figcaption>
+                </figure>
             </div>
         </div>
     </section>
 
     <!-- SEO Content Section -->
-    <section class="seo-content fade-in">
+    <section class="seo-content fade-in" role="region" aria-label="About Scrib">
         <div class="seo-content-inner">
-            <p>Scrib is the best offline notes app for Android users who value privacy. Unlike cloud-based apps, everything stays on your device — no data ever leaves your phone. Secure local notes with no internet needed.</p>
+            <p>Scrib is the best offline notes app for Android privacy seekers. Unlike cloud-based apps, everything stays on your device with secure local storage — no data ever leaves your phone. A truly private notepad with no internet required, no cloud sync, and fully on-device storage. Perfect for users who want a no-tracking notes app that respects their privacy.</p>
         </div>
     </section>
 
     <!-- Final CTA Section -->
-    <section class="final-cta fade-in" aria-labelledby="download-heading">
+    <section class="final-cta fade-in" role="region" aria-labelledby="download-heading">
         <h2 id="download-heading">Ready to take notes the private way?</h2>
         <a href="https://play.google.com/store/apps/details?id=com.beeswaxpat.jot"
            class="cta-button primary large"
@@ -247,14 +289,14 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="footer-content">
             <div class="footer-brand">
                 <div class="footer-logo">
                     <img src="app-icon-512.png" alt="" class="footer-logo-icon" width="28" height="28">
                     <span>Scrib</span>
                 </div>
-                <p>A minimalist notes app.</p>
+                <p>A minimalist, privacy-first notes app.</p>
             </div>
             <div class="footer-links">
                 <a href="https://x.com/BeeswaxPat" target="_blank" rel="noopener noreferrer" aria-label="Follow @BeeswaxPat on X">
@@ -267,6 +309,9 @@
             </div>
             <p class="footer-privacy">
                 <strong>Privacy Promise:</strong> Scrib collects zero data. Your notes stay on your device. Period.
+            </p>
+            <p class="footer-ai-friendly">
+                <small>🤖 AI-Friendly: Transparent schema, no trackers — built for ethical discoverability.</small>
             </p>
             <p class="footer-copyright">© 2026 Beeswax Pat</p>
         </div>
