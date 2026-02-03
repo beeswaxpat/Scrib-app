@@ -1,0 +1,380 @@
+<!--
+================================================================================
+MASTER LANDING PAGE TEMPLATE - Beeswax Pat
+================================================================================
+
+BEST PRACTICES IMPLEMENTED:
+
+SEO & DISCOVERABILITY:
+- Keyword-rich title, meta description, and keywords tag
+- JSON-LD SoftwareApplication + Organization schema for rich results
+- Open Graph + Twitter Card meta tags for social sharing
+- Canonical URL to prevent duplicate content
+- Semantic HTML5 structure (header, section, article, footer)
+- Descriptive, keyword-rich alt text on all images
+
+CONVERSION OPTIMIZATION:
+- Official Google Play badge (higher trust than custom buttons)
+- Multiple CTAs: hero, final section, sticky mobile bar
+- Social proof via launch badge ("Now Available")
+- Trust signals: privacy badge, "Zero Data Collected"
+- Screenshot gallery builds confidence before download
+- Clean visual hierarchy guides eye to CTAs
+
+PRIVACY & TRUST:
+- Zero tracking (no analytics scripts)
+- Privacy-first messaging throughout
+- Transparent "Privacy Promise" in footer
+- "AI-Friendly" badge signals ethical practices
+
+ACCESSIBILITY:
+- ARIA labels and roles throughout
+- Semantic heading hierarchy (h1 > h2 > h3)
+- Alt text on all images
+- Focus-visible styles for keyboard navigation
+- prefers-reduced-motion support
+- High contrast mode support
+
+PERFORMANCE:
+- Lazy loading on below-fold images
+- Preconnect to Google Fonts
+- Minimal JavaScript (theme toggle + animations only)
+- No external dependencies beyond fonts
+
+MOBILE:
+- Responsive design with mobile-first breakpoints
+- Sticky CTA bar on mobile
+- Touch-friendly button sizes
+- Safe area inset support
+
+================================================================================
+PLACEHOLDER REFERENCE:
+================================================================================
+
+{{APP_NAME}}           - App display name (e.g., "Scrib")
+{{APP_NAME_LOWER}}     - Lowercase for URLs/IDs (e.g., "scrib")
+{{TAGLINE}}            - Main value prop (e.g., "No tracking. No cloud. Just notes.")
+{{SUBTITLE}}           - Secondary benefits line
+{{DESCRIPTION_SHORT}}  - Meta description (~155 chars)
+{{DESCRIPTION_LONG}}   - SEO paragraph (2-3 sentences)
+{{KEYWORDS}}           - Comma-separated keywords for meta tag
+{{KEYWORDS_ARRAY}}     - JSON array of keywords for schema
+
+{{PLAY_STORE_ID}}      - Full package ID (e.g., "com.beeswaxpat.jot")
+{{LANDING_URL}}        - Full landing page URL
+{{VERSION}}            - App version (e.g., "1.6.0")
+{{DATE_PUBLISHED}}     - ISO date (e.g., "2026-01-15")
+{{LANGUAGES_ARRAY}}    - JSON array of language codes
+{{LANGUAGES_DISPLAY}}  - Display text (e.g., "10 Languages")
+
+{{FEATURES_LIST}}      - 8 feature cards (copy structure from template)
+{{FEATURE_LIST_ARRAY}} - JSON array of feature names for schema
+
+{{APP_ICON}}           - App icon filename (e.g., "app-icon-512.png")
+{{OG_IMAGE}}           - OG image filename (e.g., "og-image.png")
+{{FAVICON_SVG}}        - SVG favicon filename
+{{FAVICON_PNG}}        - PNG favicon filename
+{{PLAY_BADGE}}         - Google Play badge filename
+
+{{SCREENSHOT_1_SRC}} through {{SCREENSHOT_6_SRC}} - Screenshot filenames
+{{SCREENSHOT_1_ALT}} through {{SCREENSHOT_6_ALT}} - Screenshot alt text
+{{SCREENSHOT_1_LABEL}} through {{SCREENSHOT_6_LABEL}} - Screenshot captions
+
+{{GALLERY_GROUP_1_TITLE}} - First gallery group title (e.g., "Quick Onboarding")
+{{GALLERY_GROUP_2_TITLE}} - Second gallery group title (e.g., "Your Notes, Your Way")
+
+{{TWITTER_HANDLE}}     - Twitter/X handle (e.g., "@BeeswaxPat")
+{{AUTHOR_NAME}}        - Developer/company name
+{{AUTHOR_URL}}         - Developer website or social URL
+{{COPYRIGHT_YEAR}}     - Current year
+
+{{PRIVACY_HEADING}}    - Privacy section heading
+{{PRIVACY_TEXT}}       - Privacy section description
+
+{{FINAL_CTA_HEADING}}  - Final CTA section heading
+{{CTA_SUBTEXT}}        - Text below final CTA
+
+================================================================================
+-->
+<!DOCTYPE html>
+<html lang="en" data-default-lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#007BFF">
+
+    <!-- SEO Meta Tags -->
+    <title>{{APP_NAME}} App - {{DESCRIPTION_SHORT}}</title>
+    <meta name="description" content="{{DESCRIPTION_SHORT}}">
+    <meta name="keywords" content="{{KEYWORDS}}">
+    <meta name="author" content="{{AUTHOR_NAME}}">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{LANDING_URL}}">
+    <meta property="og:title" content="{{APP_NAME}} - {{TAGLINE}}">
+    <meta property="og:description" content="{{DESCRIPTION_SHORT}}">
+    <meta property="og:image" content="{{LANDING_URL}}{{OG_IMAGE}}">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="{{TWITTER_HANDLE}}">
+    <meta name="twitter:title" content="{{APP_NAME}} - {{TAGLINE}}">
+    <meta name="twitter:description" content="{{DESCRIPTION_SHORT}}">
+    <meta name="twitter:image" content="{{LANDING_URL}}{{OG_IMAGE}}">
+
+    <!-- JSON-LD Schema for Rich Results -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "{{APP_NAME}}",
+      "alternateName": "{{APP_NAME}} Notes",
+      "operatingSystem": "Android 8.0+",
+      "applicationCategory": "UtilitiesApplication",
+      "applicationSubCategory": "Notes & Journals",
+      "description": "{{DESCRIPTION_LONG}}",
+      "keywords": {{KEYWORDS_ARRAY}},
+      "featureList": {{FEATURE_LIST_ARRAY}},
+      "screenshot": "{{LANDING_URL}}{{OG_IMAGE}}",
+      "image": "{{LANDING_URL}}{{APP_ICON}}",
+      "url": "{{LANDING_URL}}",
+      "downloadUrl": "https://play.google.com/store/apps/details?id={{PLAY_STORE_ID}}",
+      "installUrl": "https://play.google.com/store/apps/details?id={{PLAY_STORE_ID}}",
+      "softwareVersion": "{{VERSION}}",
+      "datePublished": "{{DATE_PUBLISHED}}",
+      "inLanguage": {{LANGUAGES_ARRAY}},
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "ratingCount": "1",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "{{AUTHOR_NAME}}",
+        "url": "{{AUTHOR_URL}}"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{AUTHOR_NAME}}"
+      },
+      "maintainer": {
+        "@type": "Organization",
+        "name": "{{AUTHOR_NAME}}"
+      }
+    }
+    </script>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "{{AUTHOR_NAME}}",
+      "url": "{{LANDING_URL}}",
+      "logo": "{{LANDING_URL}}{{APP_ICON}}",
+      "sameAs": ["{{AUTHOR_URL}}"]
+    }
+    </script>
+
+    <!-- PWA / Mobile -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="{{APP_NAME}}">
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Icons -->
+    <link rel="icon" type="image/svg+xml" href="{{FAVICON_SVG}}?v=2">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{FAVICON_PNG}}?v=2">
+    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon-180.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{LANDING_URL}}">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- No analytics - we practice what we preach: zero tracking -->
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <span class="theme-icon">🌙</span>
+    </button>
+
+    <!-- Hero Section -->
+    <header class="hero" role="banner" aria-label="App Introduction">
+        <div class="hero-content" itemscope itemtype="https://schema.org/SoftwareApplication">
+            <span class="launch-badge">✅ Now Available on Google Play</span>
+            <div class="logo">
+                <img src="{{APP_ICON}}" alt="{{APP_NAME}} Logo" class="logo-icon-img" width="64" height="64" itemprop="image">
+                <h1 class="logo-text" itemprop="name">{{APP_NAME}}</h1>
+            </div>
+            <p class="tagline" itemprop="slogan">{{TAGLINE}}</p>
+            <p class="subtitle">{{SUBTITLE}}</p>
+
+            <!-- Primary CTA - Official Google Play Badge -->
+            <a href="https://play.google.com/store/apps/details?id={{PLAY_STORE_ID}}"
+               id="mainCta"
+               class="play-badge-link"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Get it on Google Play">
+                <img src="{{PLAY_BADGE}}" alt="Get it on Google Play" class="play-badge" height="70">
+            </a>
+        </div>
+    </header>
+
+    <!-- Privacy Badge Section -->
+    <section class="privacy-badge fade-in" role="region" aria-labelledby="privacy-heading">
+        <div class="badge-content">
+            <svg class="badge-icon-svg" viewBox="0 0 24 24" width="48" height="48" aria-hidden="true" role="img">
+                <title>Privacy lock icon</title>
+                <path fill="currentColor" d="M12 1C8.676 1 6 3.676 6 7v2H4v14h16V9h-2V7c0-3.324-2.676-6-6-6zm0 2c2.276 0 4 1.724 4 4v2H8V7c0-2.276 1.724-4 4-4zm-6 8h12v10H6V11zm6 3a2 2 0 0 0-1 3.732V20h2v-2.268A2 2 0 0 0 12 14z"/>
+            </svg>
+            <div class="badge-text">
+                <h2 id="privacy-heading">{{PRIVACY_HEADING}}</h2>
+                <p>{{PRIVACY_TEXT}}</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features fade-in" role="region" aria-labelledby="features-heading">
+        <h2 id="features-heading" class="section-title">Everything you need. Nothing you don't.</h2>
+
+        <div class="features-grid" role="list">
+            {{FEATURES_LIST}}
+            <!--
+            FEATURE CARD TEMPLATE (repeat 8 times):
+            <article class="feature-card" role="listitem">
+                <span class="feature-icon" aria-hidden="true">📝</span>
+                <h3>Feature Name</h3>
+                <p>Feature description goes here.</p>
+            </article>
+            -->
+        </div>
+    </section>
+
+    <!-- App Gallery - Trust-Building Screenshots -->
+    <section class="app-gallery fade-in" role="region" aria-labelledby="gallery-heading">
+        <h2 id="gallery-heading" class="section-title">See What You'll Get</h2>
+        <p class="section-subtitle">A guided onboarding and beautiful experience</p>
+
+        <!-- Gallery Group 1 -->
+        <div class="gallery-group">
+            <h3 class="gallery-group-title">{{GALLERY_GROUP_1_TITLE}}</h3>
+            <div class="gallery-grid">
+                <figure class="gallery-item">
+                    <img src="{{SCREENSHOT_1_SRC}}" alt="{{SCREENSHOT_1_ALT}}" class="gallery-screenshot" loading="lazy">
+                    <figcaption class="gallery-label">{{SCREENSHOT_1_LABEL}}</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="{{SCREENSHOT_2_SRC}}" alt="{{SCREENSHOT_2_ALT}}" class="gallery-screenshot" loading="lazy">
+                    <figcaption class="gallery-label">{{SCREENSHOT_2_LABEL}}</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="{{SCREENSHOT_3_SRC}}" alt="{{SCREENSHOT_3_ALT}}" class="gallery-screenshot" loading="lazy">
+                    <figcaption class="gallery-label">{{SCREENSHOT_3_LABEL}}</figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <!-- Gallery Group 2 -->
+        <div class="gallery-group">
+            <h3 class="gallery-group-title">{{GALLERY_GROUP_2_TITLE}}</h3>
+            <div class="gallery-grid">
+                <figure class="gallery-item">
+                    <img src="{{SCREENSHOT_4_SRC}}" alt="{{SCREENSHOT_4_ALT}}" class="gallery-screenshot" loading="lazy">
+                    <figcaption class="gallery-label">{{SCREENSHOT_4_LABEL}}</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="{{SCREENSHOT_5_SRC}}" alt="{{SCREENSHOT_5_ALT}}" class="gallery-screenshot" loading="lazy">
+                    <figcaption class="gallery-label">{{SCREENSHOT_5_LABEL}}</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="{{SCREENSHOT_6_SRC}}" alt="{{SCREENSHOT_6_ALT}}" class="gallery-screenshot" loading="lazy">
+                    <figcaption class="gallery-label">{{SCREENSHOT_6_LABEL}}</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO Content Section -->
+    <section class="seo-content fade-in" role="region" aria-label="About {{APP_NAME}}">
+        <div class="seo-content-inner">
+            <p>{{DESCRIPTION_LONG}}</p>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta fade-in" role="region" aria-labelledby="download-heading">
+        <h2 id="download-heading">{{FINAL_CTA_HEADING}}</h2>
+        <a href="https://play.google.com/store/apps/details?id={{PLAY_STORE_ID}}"
+           class="play-badge-link"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Get it on Google Play">
+            <img src="{{PLAY_BADGE}}" alt="Get it on Google Play" class="play-badge play-badge-large" height="90">
+        </a>
+        <p class="cta-subtext">{{CTA_SUBTEXT}}</p>
+    </section>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="sticky-cta" aria-hidden="true">
+        <a href="https://play.google.com/store/apps/details?id={{PLAY_STORE_ID}}" class="sticky-button" target="_blank" rel="noopener noreferrer">
+            Get {{APP_NAME}} Free
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="{{APP_ICON}}" alt="" class="footer-logo-icon" width="28" height="28">
+                    <span>{{APP_NAME}}</span>
+                </div>
+                <p>A minimalist, privacy-first app.</p>
+            </div>
+            <div class="footer-links">
+                <a href="{{AUTHOR_URL}}" target="_blank" rel="noopener noreferrer" aria-label="Follow {{TWITTER_HANDLE}} on X">
+                    {{TWITTER_HANDLE}} on X
+                </a>
+                <span class="footer-divider">•</span>
+                <a href="https://play.google.com/store/apps/details?id={{PLAY_STORE_ID}}" target="_blank" rel="noopener noreferrer">
+                    Google Play
+                </a>
+            </div>
+            <p class="footer-privacy">
+                <strong>Privacy Promise:</strong> {{APP_NAME}} collects zero data. Your data stays on your device. Period.
+            </p>
+            <p class="footer-ai-friendly">
+                <small>🤖 AI-Friendly: Transparent schema, no trackers — built for ethical discoverability.</small>
+            </p>
+            <p class="footer-copyright">© {{COPYRIGHT_YEAR}} {{AUTHOR_NAME}}</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+================================================================================
+LANDING PAGE GENERATOR PROMPT
+================================================================================
+
+Copy everything below this line and paste it to Claude when you want to create
+a new landing page. Fill in your app details in the [BRACKETS].
+
+================================================================================
+
+You are helping me (Beeswax Pat, indie Android dev) create a high-converting, privacy-first landing page for my new app.
+
+Use my MASTER_TEMPLATE.html as the base. Replace all {{PLACEHOLDERS}} with the details I provide below, then output the complete, ready-to-deploy HTML file.
+
+## APP DETAILS
+
+**Basic Info:**
+- App Name: [e.g., Scrib]
+- Tagline: [e.g., No tracking. No cloud. Just notes.]
+- Subtitle: [e.g., 100% Private • No Login • 🌍 10 Languages • Offline]
+- Play Store ID: [e.g., com.beeswaxpat.jot]
+- Landing URL: [e.g., https://scrib-gz4q.onrender.com/]
+- Version: [e.g., 1.6.0]
+- Date Published: [e.g., 2026-01-15]
+
+**Descriptions:**
+- Short (for meta, ~155 chars): [e.g., Scrib: Free, offline, privacy-first minimalist notes app for Android. No tracking, no cloud, no accounts.]
+- Long (for SEO paragraph): [e.g., Scrib is the best offline notes app for Android privacy seekers. Unlike cloud-based apps, everything stays on your device with secure local storage — no data ever leaves your phone. A truly private notepad with no internet required, no cloud sync, and fully on-device storage. Perfect for users who want a no-tracking notes app that respects their privacy.]
+
+**Keywords:**
+- Meta keywords: [e.g., notes app, offline notes, private notes, android notes, minimalist notes]
+- JSON array for schema: [e.g., ["privacy-first notes", "offline notepad", "no tracking app"]]
+
+**Languages:**
+- Display text: [e.g., 10 Languages]
+- JSON array: [e.g., ["en", "es", "fr", "de", "pt", "ja", "ko", "zh", "ar", "hi"]]
+
+**Features (8 cards):**
+1. Icon: [emoji] | Title: [name] | Description: [text]
+2. Icon: [emoji] | Title: [name] | Description: [text]
+3. Icon: [emoji] | Title: [name] | Description: [text]
+4. Icon: [emoji] | Title: [name] | Description: [text]
+5. Icon: [emoji] | Title: [name] | Description: [text]
+6. Icon: [emoji] | Title: [name] | Description: [text]
+7. Icon: [emoji] | Title: [name] | Description: [text]
+8. Icon: [emoji] | Title: [name] | Description: [text]
+
+**Feature list for schema:** [e.g., ["Auto-save", "Color coding", "Voice input", "Dark mode"]]
+
+**Privacy Section:**
+- Heading: [e.g., Zero Data Collected]
+- Text: [e.g., A private notes app with no account required. Your notes never leave your device — no sync, no tracking, no internet needed.]
+
+**Screenshots (6 total, in 2 groups of 3):**
+
+Group 1 Title: [e.g., Quick Onboarding]
+1. Filename: [e.g., onboarding-create.jpg] | Alt: [keyword-rich description] | Label: [e.g., Create Notes]
+2. Filename: [e.g., onboarding-colors.jpg] | Alt: [keyword-rich description] | Label: [e.g., Pick Your Colors]
+3. Filename: [e.g., onboarding-privacy.jpg] | Alt: [keyword-rich description] | Label: [e.g., Privacy First]
+
+Group 2 Title: [e.g., Your Notes, Your Way]
+4. Filename: [e.g., notes-dark.jpg] | Alt: [keyword-rich description] | Label: [e.g., Dark Mode]
+5. Filename: [e.g., notes-light.jpg] | Alt: [keyword-rich description] | Label: [e.g., Light Mode]
+6. Filename: [e.g., settings-screen.jpg] | Alt: [keyword-rich description] | Label: [e.g., Customize Settings]
+
+**CTAs:**
+- Final CTA Heading: [e.g., Ready to take notes the private way?]
+- CTA Subtext: [e.g., No ads. No tracking. Always private.]
+
+**Branding:**
+- Author/Company: [e.g., Beeswax Pat]
+- Author URL: [e.g., https://x.com/BeeswaxPat]
+- Twitter Handle: [e.g., @BeeswaxPat]
+- Copyright Year: [e.g., 2026]
+
+**Assets (filenames only - I'll provide the actual files):**
+- App Icon: [e.g., app-icon-512.png]
+- OG Image: [e.g., og-image.png]
+- Favicon SVG: [e.g., favicon.svg]
+- Favicon PNG: [e.g., icon-32.png]
+- Play Badge: [e.g., google-play-badge.png]
+
+---
+
+## OUTPUT
+
+Generate the complete index.html file with all placeholders replaced. Keep the exact same structure, styling references, and JavaScript references as the template. The output should be ready to deploy immediately.
+
+Also remind me to:
+1. Copy style.css and script.js from my Scrib project
+2. Download the official Google Play badge if I don't have it
+3. Create/copy all image assets listed above
+4. Update manifest.json with the new app details
+5. Add the _headers file for security headers on Render
+
+================================================================================
+END OF PROMPT
+================================================================================
