@@ -270,6 +270,40 @@ body {
     height: 28px;
 }
 
+/* ==================== GOOGLE PLAY BADGE ==================== */
+
+.play-badge-link {
+    display: inline-block;
+    transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+.play-badge-link:hover {
+    transform: scale(1.05);
+}
+
+.play-badge-link:active {
+    transform: scale(0.98);
+}
+
+.play-badge {
+    height: 60px;
+    width: auto;
+}
+
+.play-badge-large {
+    height: 80px;
+}
+
+@media (max-width: 600px) {
+    .play-badge {
+        height: 50px;
+    }
+
+    .play-badge-large {
+        height: 60px;
+    }
+}
+
 /* ==================== PRIVACY BADGE ==================== */
 
 .privacy-badge {
