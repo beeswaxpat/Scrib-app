@@ -8,9 +8,9 @@
     <!-- SEO Meta Tags -->
     <title>Scrib App - Free Offline Notes for Android</title>
     <meta name="description" content="Scrib: Free, offline, privacy-first minimalist notes app for Android. No tracking, no cloud, no accounts. Auto-save, color coding, voice input, and full accessibility.">
-    <meta name="keywords" content="notes app, offline notes, private notes, android notes, minimalist notes, bullet lists, voice notes, offline notepad, secure notes app, no account notes">
+    <meta name="keywords" content="notes app, offline notes, private notes, android notes, minimalist notes, bullet lists, voice notes, offline notepad, secure notes app, no account notes, privacy first notes, no tracking notes app, local storage notes, no cloud notes, free notes app android, simple notepad android, dark mode notes, accessible notes app">
     <meta name="author" content="Beeswax Pat">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -48,7 +48,7 @@
       "installUrl": "https://play.google.com/store/apps/details?id=com.beeswaxpat.jot",
       "softwareVersion": "1.6.3",
       "datePublished": "2026-01-15",
-      "inLanguage": ["en", "es", "fr", "de", "pt", "ja", "ko", "zh", "ar", "hi"],
+      "inLanguage": ["en", "es", "fr", "de", "pt-BR", "ja", "zh-CN", "ar", "hi", "ru"],
       "isAccessibleForFree": true,
       "offers": {
         "@type": "Offer",
@@ -106,6 +106,10 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://scrib.cfd/">
 
+    <!-- hreflang for international SEO (app supports 10 languages) -->
+    <link rel="alternate" hreflang="en" href="https://scrib.cfd/">
+    <link rel="alternate" hreflang="x-default" href="https://scrib.cfd/">
+
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
 
@@ -115,6 +119,64 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
     <!-- No analytics - we practice what we preach: zero tracking -->
+
+    <!-- FAQ Schema for Rich Results -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Scrib really free with no ads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Scrib is completely free with no ads, no in-app purchases, and no premium tiers. We believe note-taking should be simple and accessible to everyone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Scrib sync my notes to the cloud?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, Scrib stores all notes locally on your device only. Your notes never leave your phone - there's no cloud sync, no account required, and no internet connection needed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What makes Scrib different from other notes apps?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Scrib is built with privacy as the core principle. Unlike most apps, we collect zero data, require no account, work completely offline, and never track user behavior. It's minimalist by design with features like auto-save, color coding, voice input, and full accessibility support."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Scrib accessible for users with disabilities?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Scrib is fully accessible with TalkBack screen reader support, adjustable text sizes (small, medium, large), high contrast themes, and semantic markup for assistive technologies."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://scrib.cfd/"
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <!-- Theme Toggle -->
@@ -261,6 +323,29 @@
     <section class="seo-content fade-in" role="region" aria-label="About Scrib">
         <div class="seo-content-inner">
             <p>Scrib is the best offline notes app for Android privacy seekers. Unlike cloud-based apps, everything stays on your device with secure local storage — no data ever leaves your phone. A truly private notepad with no internet required, no cloud sync, and fully on-device storage. Perfect for users who want a no-tracking notes app that respects their privacy.</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section fade-in" role="region" aria-labelledby="faq-heading">
+        <h2 id="faq-heading" class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <details class="faq-item">
+                <summary class="faq-question">Is Scrib really free with no ads?</summary>
+                <p class="faq-answer">Yes, Scrib is completely free with no ads, no in-app purchases, and no premium tiers. We believe note-taking should be simple and accessible to everyone.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-question">Does Scrib sync my notes to the cloud?</summary>
+                <p class="faq-answer">No, Scrib stores all notes locally on your device only. Your notes never leave your phone — there's no cloud sync, no account required, and no internet connection needed.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-question">What makes Scrib different from other notes apps?</summary>
+                <p class="faq-answer">Scrib is built with privacy as the core principle. Unlike most apps, we collect zero data, require no account, work completely offline, and never track user behavior. It's minimalist by design with features like auto-save, color coding, voice input, and full accessibility support.</p>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-question">Is Scrib accessible for users with disabilities?</summary>
+                <p class="faq-answer">Yes, Scrib is fully accessible with TalkBack screen reader support, adjustable text sizes (small, medium, large), high contrast themes, and semantic markup for assistive technologies.</p>
+            </details>
         </div>
     </section>
 

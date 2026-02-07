@@ -1,0 +1,16 @@
+# Scrib Landing Page - robots.txt
+# Privacy-first notes app: https://scrib.cfd
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://scrib.cfd/sitemap.xml
+
+# Disallow any future admin or private paths
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.git/
+
+# Crawl-delay for politeness (optional, respected by some bots)
+Crawl-delay: 1
