@@ -560,6 +560,118 @@ body {
     letter-spacing: 0.05em;
 }
 
+/* ==================== COMPARISON TABLE ==================== */
+
+.comparison-section {
+    padding: var(--spacing-xl) var(--spacing-md);
+    background: var(--bg-primary);
+}
+
+.comparison-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.homepage-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-body);
+    font-size: var(--font-size-sm);
+    min-width: 500px;
+}
+
+.homepage-table th {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    text-align: center;
+    padding: var(--spacing-sm);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border-bottom: 2px solid var(--border);
+    white-space: nowrap;
+}
+
+.homepage-table th:first-child {
+    text-align: left;
+}
+
+.homepage-table th:nth-child(2) {
+    color: var(--accent);
+}
+
+.homepage-table td {
+    padding: var(--spacing-sm);
+    border-bottom: 1px solid var(--border);
+    color: var(--text-secondary);
+    text-align: center;
+    vertical-align: middle;
+}
+
+.homepage-table td:first-child {
+    text-align: left;
+    font-weight: 500;
+    color: var(--text-primary);
+    white-space: nowrap;
+}
+
+.homepage-table tr:hover td {
+    background: var(--bg-secondary);
+}
+
+.homepage-table td.yes {
+    color: var(--green);
+    font-weight: 600;
+}
+
+.homepage-table td.no {
+    color: var(--text-muted);
+}
+
+.homepage-table td.partial {
+    color: var(--orange);
+}
+
+.comparison-note {
+    text-align: center;
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    margin-top: var(--spacing-md);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.comparison-note a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.comparison-note a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .homepage-table {
+        font-size: 0.75rem;
+    }
+
+    .homepage-table th,
+    .homepage-table td {
+        padding: var(--spacing-xs);
+    }
+
+    .homepage-table td:first-child {
+        white-space: normal;
+    }
+
+    .comparison-wrapper {
+        margin: 0 calc(-1 * var(--spacing-sm));
+        padding: 0 var(--spacing-sm);
+    }
+}
+
 /* ==================== SEO CONTENT ==================== */
 
 .seo-content {
