@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#007BFF">
+
+    <!-- SEO Meta Tags -->
+    <title>Scrib Blog - Privacy, Encryption, and Secure Notes</title>
+    <meta name="description" content="Articles about note-taking privacy, AES-256 encryption, and building a secure notes app. By Beeswax Pat, creator of Scrib.">
+    <meta name="author" content="Beeswax Pat">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://scrib.cfd/blog/">
+    <meta property="og:title" content="Scrib Blog - Privacy, Encryption, and Secure Notes">
+    <meta property="og:description" content="Articles about note-taking privacy, encryption, and building a secure notes app.">
+    <meta property="og:image" content="https://scrib.cfd/og-image.png">
+    <meta property="og:site_name" content="Scrib">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://scrib.cfd/blog/">
+
+    <!-- Icons -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg?v=2">
+    <link rel="icon" type="image/png" sizes="32x32" href="../icon-32.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="../icon-180.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="blog.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        .blog-list {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: var(--spacing-lg) var(--spacing-md);
+        }
+        .blog-list h1 {
+            font-family: var(--font-heading);
+            font-size: var(--font-size-2xl);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-xs);
+        }
+        .blog-list-subtitle {
+            color: var(--text-secondary);
+            font-size: var(--font-size-base);
+            margin-bottom: var(--spacing-lg);
+        }
+        .blog-post-card {
+            display: block;
+            text-decoration: none;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-md);
+            margin-bottom: var(--spacing-sm);
+            transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+        }
+        .blog-post-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px var(--shadow-hover);
+        }
+        .blog-post-card h2 {
+            font-family: var(--font-heading);
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: var(--spacing-xs);
+        }
+        .blog-post-card p {
+            font-family: var(--font-body);
+            font-size: var(--font-size-sm);
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: var(--spacing-xs);
+        }
+        .blog-post-card time {
+            font-size: var(--font-size-sm);
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="blog-nav" aria-label="Blog navigation">
+        <a href="https://scrib.cfd/" class="blog-nav-brand" aria-label="Back to Scrib homepage">
+            <img src="../app-icon-512.png" alt="" width="28" height="28">
+            Scrib
+        </a>
+        <a href="https://scrib.cfd/" class="blog-nav-link">Back to Scrib</a>
+    </nav>
+
+    <!-- Theme Toggle -->
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <span class="theme-icon">&#127769;</span>
+    </button>
+
+    <!-- Blog Listing -->
+    <main class="blog-list">
+        <h1>Scrib Blog</h1>
+        <p class="blog-list-subtitle">Privacy, encryption, and building a notes app that respects your data.</p>
+
+        <a href="/blog/best-private-notes-apps-android" class="blog-post-card">
+            <h2>Best Private Notes Apps for Android in 2026 (No Cloud Required)</h2>
+            <p>Honest comparison of Scrib, Standard Notes, Joplin, and Notally. What each does well, where each falls short, and who each one is best for.</p>
+            <time datetime="2026-02-15">February 15, 2026</time>
+        </a>
+
+        <a href="/blog/why-your-notes-need-encryption" class="blog-post-card">
+            <h2>Why Your Notes Need Encryption in 2026</h2>
+            <p>Your notes app holds passwords, medical info, and personal thoughts. Here's why that data needs encryption — and what to look for.</p>
+            <time datetime="2026-02-15">February 15, 2026</time>
+        </a>
+
+        <a href="/blog/google-keep-vs-encrypted-notes" class="blog-post-card">
+            <h2>Google Keep vs Encrypted Notes: What Happens to Your Data</h2>
+            <p>How cloud-based notes apps handle your data compared to encrypted, offline alternatives. A factual comparison.</p>
+            <time datetime="2026-02-14">February 14, 2026</time>
+        </a>
+    </main>
+
+    <!-- Footer -->
+    <footer class="blog-footer" role="contentinfo">
+        <p>
+            <a href="https://scrib.cfd/">Scrib</a> is a free, encrypted notes app for Android by <a href="https://x.com/BeeswaxPat" target="_blank" rel="noopener noreferrer">Beeswax Pat</a>. Zero data collected. Always.
+        </p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

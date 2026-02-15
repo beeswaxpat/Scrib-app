@@ -9,7 +9,7 @@
     <title>Google Keep vs Encrypted Notes: What Happens to Your Data | Scrib</title>
     <meta name="description" content="Google Keep stores your notes on their servers. Here's what that means for your privacy, how AES-256 encryption actually works, and why I built an offline encrypted notes app instead.">
     <meta name="keywords" content="google keep privacy, google keep encryption, encrypted notes app, google keep alternative, secure notes app android, is google keep private, encrypted notes vs google keep, offline notes app, private notes android">
-    <meta name="author" content="Patrick - Beeswax Pat">
+    <meta name="author" content="Beeswax Pat">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 
     <!-- Open Graph -->
@@ -20,7 +20,7 @@
     <meta property="og:image" content="https://scrib.cfd/og-image.png">
     <meta property="og:site_name" content="Scrib">
     <meta property="article:published_time" content="2026-02-14T00:00:00Z">
-    <meta property="article:author" content="Patrick">
+    <meta property="article:author" content="Beeswax Pat">
     <meta property="article:section" content="Privacy">
     <meta property="article:tag" content="encryption">
     <meta property="article:tag" content="privacy">
@@ -42,7 +42,7 @@
       "description": "Google Keep stores your notes on their servers. Here's what that means for your privacy, how AES-256 encryption actually works, and why I built an offline encrypted notes app instead.",
       "author": {
         "@type": "Person",
-        "name": "Patrick",
+        "name": "Beeswax Pat",
         "jobTitle": "Founder",
         "worksFor": {
           "@type": "Organization",
@@ -122,7 +122,7 @@
             <img src="../app-icon-512.png" alt="" width="28" height="28">
             Scrib
         </a>
-        <a href="https://scrib.cfd/" class="blog-nav-link">Back to Scrib</a>
+        <a href="/blog/" class="blog-nav-link">All Posts</a>
     </nav>
 
     <!-- Theme Toggle -->
@@ -135,7 +135,7 @@
         <header class="blog-article-header">
             <h1 itemprop="headline">Google Keep vs Encrypted Notes: What Happens to Your Data</h1>
             <div class="blog-meta">
-                <span>By <span itemprop="author">Patrick</span></span>
+                <span>By <span itemprop="author">Beeswax Pat</span></span>
                 <span>&middot;</span>
                 <time datetime="2026-02-14" itemprop="datePublished">February 14, 2026</time>
                 <span>&middot;</span>
@@ -146,7 +146,7 @@
         <div class="blog-content" itemprop="articleBody">
             <p>Your notes are more personal than you think. Passwords, journal entries, medical info, business ideas, things you haven't told anyone. Most people dump all of this into Google Keep without a second thought.</p>
 
-            <p>I'm not here to trash Google. They build solid products. But I think people deserve to know what happens to their data when they hit "save" — and what the alternative looks like.</p>
+            <p>People deserve to know what happens to their data — and what the alternative looks like.</p>
 
             <h2>Where Google Keep Stores Your Notes</h2>
 
@@ -159,7 +159,7 @@
                 <li><strong>Data breaches happen.</strong> No company is immune. Cloud storage means your data exists on servers you don't control, in data centers you'll never visit.</li>
             </ul>
 
-            <p>None of this makes Google evil. It's just the reality of how cloud-based apps work. "Free and convenient" has a cost — and that cost is control over your own data.</p>
+            <p>That's how cloud-based note apps work. Convenient — but the cost is control over your own data.</p>
 
             <h2>What "Encrypted" Actually Means</h2>
 
@@ -173,11 +173,11 @@
 
             <h2>Why I Built Scrib</h2>
 
-            <p>I'm Patrick — indie developer, U.S. Army veteran. I built <a href="https://scrib.cfd/">Scrib</a> because I couldn't find a notes app that met four simple requirements:</p>
+            <p>I'm Beeswax Pat — indie developer, U.S. Army veteran. I built <a href="https://scrib.cfd/">Scrib</a> because I couldn't find a notes app that met four simple requirements:</p>
 
             <ol>
                 <li><strong>Never connects to the internet.</strong> Not "optionally offline." There is no server. No sync feature. No cloud. The app doesn't have networking code in it.</li>
-                <li><strong>Encrypts everything automatically.</strong> Every note is AES-256 encrypted the moment it's saved. You don't toggle anything. It just happens.</li>
+                <li><strong>Encrypts everything automatically.</strong> Every note is AES-256 encrypted the moment it's saved — that's the base layer, always on. On top of that, you can toggle per-note encryption for your most sensitive notes as a second layer.</li>
                 <li><strong>Keeps the key on your device.</strong> The encryption key is generated on your phone and stored in the Android Keystore — a hardware-backed secure area that other apps can't access.</li>
                 <li><strong>No account required.</strong> No email. No phone number. No sign-up. Open the app and write.</li>
             </ol>

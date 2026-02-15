@@ -95,6 +95,42 @@ body {
     text-rendering: optimizeLegibility;
 }
 
+/* ==================== BLOG TOP LINK ==================== */
+
+.blog-top-link {
+    position: fixed;
+    top: var(--spacing-sm);
+    left: var(--spacing-sm);
+    z-index: 1000;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-family: var(--font-heading);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+    box-shadow: 0 2px 8px var(--shadow);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.blog-top-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px var(--shadow-hover);
+}
+
+.blog-top-link:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 600px) {
+    .blog-top-link {
+        padding: 8px 16px;
+        font-size: 0.75rem;
+    }
+}
+
 /* ==================== THEME TOGGLE ==================== */
 
 .theme-toggle {
