@@ -1,5 +1,15 @@
 /* Blog Post Styles - extends main style.css */
 
+/* Move theme toggle below sticky nav on blog pages */
+.theme-toggle {
+    top: 64px;
+}
+
+/* Hide homepage blog pill on blog pages (nav handles it) */
+.blog-top-link {
+    display: none;
+}
+
 /* Blog Navigation */
 .blog-nav {
     display: flex;
@@ -10,7 +20,7 @@
     border-bottom: 1px solid var(--border);
     position: sticky;
     top: 0;
-    z-index: 50;
+    z-index: 1001;
 }
 
 .blog-nav-brand {
