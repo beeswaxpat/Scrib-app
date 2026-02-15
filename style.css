@@ -343,9 +343,7 @@ body {
 /* ==================== PRIVACY BADGE ==================== */
 
 .privacy-badge {
-    background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
     padding: var(--spacing-lg) var(--spacing-md);
-    color: white;
 }
 
 .badge-content {
@@ -354,17 +352,21 @@ body {
     display: flex;
     align-items: center;
     gap: var(--spacing-md);
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--green);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md) var(--spacing-lg);
 }
 
 .badge-icon {
     font-size: 3rem;
     flex-shrink: 0;
-    filter: brightness(0) invert(1);
 }
 
 .badge-icon-svg {
     flex-shrink: 0;
-    color: white;
+    color: var(--green);
     width: 48px;
     height: 48px;
 }
@@ -373,13 +375,14 @@ body {
     font-family: var(--font-heading);
     font-size: var(--font-size-xl);
     font-weight: 600;
-    color: white;
+    color: var(--text-primary);
     margin-bottom: var(--spacing-xs);
 }
 
 .badge-text p {
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--text-secondary);
     font-size: var(--font-size-base);
+    line-height: 1.7;
 }
 
 /* ==================== FEATURES SECTION ==================== */
@@ -937,6 +940,7 @@ body {
     .badge-content {
         flex-direction: column;
         text-align: center;
+        padding: var(--spacing-md);
     }
 
     .badge-icon {
@@ -1083,9 +1087,6 @@ button:focus-visible {
         border: 2px solid white;
     }
 
-    .privacy-badge {
-        border: 2px solid white;
-    }
 }
 
 /* ==================== STICKY MOBILE CTA ==================== */
